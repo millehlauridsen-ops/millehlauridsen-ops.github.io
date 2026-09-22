@@ -1,29 +1,36 @@
 import { Link } from "react-router-dom";
 import Reveal from "../../components/Reveal/Reveal";
 import { projects } from "../../data/projects";
+import portrait from "../../assets/images/mig.jpeg";
 import styles from "./HomePage.module.css";
 
 export default function HomePage() {
   return (
     <div className={styles.page}>
       <section className={styles.hero}>
-        <div className={styles.heroTop}>
-          <p>Grafisk design & visuel kommunikation</p>
-          <p>Aarhus · Danmark</p>
+        <div className={styles.heroContent}>
+          <div className={styles.heroTop}>
+            <p>Grafisk design & visuel kommunikation</p>
+            <p>Aarhus · Danmark</p>
+          </div>
+
+          <div className={styles.title}>
+            <span className={styles.portfolio}>Portfolio</span>
+            <span className={styles.name}>Mille Høj Lauridsen</span>
+          </div>
+
+          <div className={styles.heroBottom}>
+            <p>
+              Jeg skaber visuelle identiteter, kampagner og digitale oplevelser
+              med et klart koncept og et personligt udtryk.
+            </p>
+
+            <a href="#projects">Se udvalgte projekter ↓</a>
+          </div>
         </div>
 
-        <div className={styles.title}>
-          <span className={styles.portfolio}>Portfolio</span>
-          <span className={styles.year}>2026</span>
-        </div>
-
-        <div className={styles.heroBottom}>
-          <p>
-            Jeg skaber visuelle identiteter, kampagner og digitale oplevelser
-            med et klart koncept og et personligt udtryk.
-          </p>
-
-          <a href="#projects">Se udvalgte projekter ↓</a>
+        <div className={styles.heroImage}>
+          <img src={portrait} alt="Portræt af Mille Lauridsen" />
         </div>
       </section>
 
@@ -40,14 +47,12 @@ export default function HomePage() {
                 <div className={styles.projectInfo}>
                   <div className={styles.projectNumber}>
                     <span>{project.number}</span>
-                    <span>{project.year}</span>
+                    <span>{project.name}</span>
                   </div>
 
                   <div>
                     <p className={styles.category}>{project.category}</p>
-
                     <h2>{project.title}</h2>
-
                     <p className={styles.description}>{project.intro}</p>
                   </div>
 

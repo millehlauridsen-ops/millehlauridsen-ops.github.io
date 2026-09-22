@@ -3,49 +3,41 @@
 }
 
 /* HERO */
+
 .hero {
-  position: relative;
-  isolation: isolate;
   min-height: 90svh;
-  padding: 120px max(24px, calc((100vw - var(--max)) / 2)) 42px;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 45%) minmax(0, 55%);
   background: var(--paper);
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 4%;
-  z-index: 0;
-  width: min(48vw, 65svh);
-
-  background-image: url("../../assets/images/mig.jpeg");
-  background-size: contain;
-  background-position: center bottom;
-  background-repeat: no-repeat;
-
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 23%);
-  mask-image: linear-gradient(to right, transparent 0%, #000 23%);
-}
-.hero > * {
-  position: relative;
-  z-index: 1;
-}
-
-.heroTop,
-.heroBottom,
-.sectionHeading {
+.heroContent {
+  min-width: 0;
+  padding: 120px clamp(24px, 4vw, 70px) 42px
+    max(24px, calc((100vw - var(--max)) / 2));
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 30px;
+  flex-direction: column;
+}
+
+.heroImage {
+  min-width: 0;
+  min-height: 0;
+  height: 95svh;
+  align-self: center;
+  overflow: hidden;
+}
+
+.heroImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 38%;
 }
 
 .heroTop {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
   color: var(--muted);
   font-size: 0.72rem;
   letter-spacing: 0.1em;
@@ -57,7 +49,6 @@
 }
 
 .title {
-  width: 48%;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -71,19 +62,22 @@
 
 .portfolio {
   color: var(--cobalt);
-  font-size: clamp(4rem, 8vw, 7.5rem);
+  font-size: clamp(3.8rem, 6.7vw, 7.2rem);
 }
 
-.year {
-  align-self: flex-start;
+.name {
   margin: 0;
   color: var(--orange);
-  font-size: clamp(3.6rem, 7vw, 6.5rem);
-  font-style: italic;
+  font-size: clamp(2.1rem, 3.2vw, 3.4rem);
+  line-height: 1.1;
+  letter-spacing: -0.04em;
 }
 
 .heroBottom {
+  display: flex;
+  flex-direction: column;
   align-items: flex-end;
+  gap: 22px;
 }
 
 .heroBottom p {
@@ -100,6 +94,13 @@
   font-size: 0.76rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+.sectionHeading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 30px;
 }
 
 /* PROJECTS */
@@ -304,73 +305,43 @@
   /* HERO */
 
   .hero {
-    min-height: 92svh;
-    padding: 90px 16px 28px;
+    min-height: auto;
+    grid-template-columns: 1fr;
   }
 
-  .hero::before {
-    top: 90px;
-    bottom: 135px;
-    right: -9%;
-    width: 70%;
-
-    background-size: contain;
-    background-position: center bottom;
-
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 30%);
-    mask-image: linear-gradient(to right, transparent 0%, #000 30%);
+  .heroContent {
+    min-height: 58svh;
+    padding: 100px 16px 36px;
   }
 
-  .heroTop {
-    gap: 15px;
+  .heroImage {
+    min-height: 0;
+    height: 58svh;
   }
 
-  .heroTop p:last-child {
-    display: none;
+  .heroImage img {
+    object-position: center 30%;
   }
 
   .title {
-    width: 52%;
-    flex: 1;
-    justify-content: center;
-    line-height: 0.88;
+    padding: 45px 0;
+    line-height: 0.85;
   }
 
   .portfolio {
-    font-size: clamp(2.7rem, 11vw, 4rem);
+    font-size: clamp(3.8rem, 16vw, 6rem);
   }
 
-  .year {
-    margin: 0;
-    font-size: clamp(2.5rem, 10vw, 3.7rem);
+  .name {
+    font-size: clamp(2rem, 8.5vw, 3rem);
   }
 
-  /*
-   * Beskrivelsen får en lys overgang bag sig,
-   * så teksten ikke ligger direkte oven på billedet.
-   */
   .heroBottom {
-    width: calc(100% + 32px);
-    margin-right: -16px;
-    margin-left: -16px;
-    margin-top: auto;
-    padding: 65px 16px 0;
-
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 20px;
-
-    background: linear-gradient(
-      to bottom,
-      transparent 0%,
-      rgba(255, 254, 246, 0.92) 42%,
-      var(--paper) 70%
-    );
+    gap: 18px;
   }
 
   .heroBottom p {
-    max-width: 330px;
-    margin: 0;
+    max-width: 420px;
     font-size: 0.9rem;
     line-height: 1.5;
   }

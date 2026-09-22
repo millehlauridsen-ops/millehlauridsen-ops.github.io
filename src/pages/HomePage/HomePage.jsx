@@ -56,8 +56,9 @@ export default function HomePage() {
             <span className={styles.portfolio}>Portfolio</span>
             <span className={styles.name}>Mille Høj Lauridsen</span>
             <p className={styles.titleDescription}>
-              Jeg skaber visuelle identiteter, kampagner og digitale oplevelser
-              med et klart koncept og et personligt udtryk.
+              Detaljeorienteret arbejdshest med kærlighed for storytelling,
+              udvikling, medmenneskelighed og surdejsbagning. Jeg elsker at give
+              den en ekstra skalle for at bidrage til det større billede.
             </p>
           </div>
 

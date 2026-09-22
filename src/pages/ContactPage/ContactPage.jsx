@@ -12,6 +12,7 @@ export default function ContactPage() {
       <a href="https://www.linkedin.com/in/mille-høj-lauridsen-8953a7403">
         LinkedIn ↗
       </a>
+      <a href="https://github.com/millehlauridsen-ops">Github ↗</a>
       <div className={styles.bottom}>
         <span>Aarhus, Danmark</span>
         <div>

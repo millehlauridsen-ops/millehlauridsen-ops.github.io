@@ -17,7 +17,7 @@ export default function Header() {
       <nav className={styles.nav} aria-label="Primær navigation">
         {" "}
         <NavLink to="/" className={styles.logo} onClick={() => setOpen(false)}>
-          Mille Lauridsen
+          Mille Høj Lauridsen
         </NavLink>
         <button
           className={styles.menuButton}

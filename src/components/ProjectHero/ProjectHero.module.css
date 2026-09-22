@@ -1,5 +1,39 @@
-.hero { width: min(var(--max), calc(100% - 48px)); margin: auto; padding: 190px 0 120px; border-bottom: 1px solid var(--line); }
-.hero > p { margin: 0; color: var(--orange); font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; }
-.hero h1 { max-width: 1100px; margin: 28px 0 70px; font-family: var(--serif); font-size: clamp(3.8rem,10vw,8.6rem); font-weight: 400; line-height: .91; letter-spacing: -.07em; }
-.text { max-width: 650px; margin-left: auto; color: var(--muted); font-size: clamp(1.05rem,1.8vw,1.45rem); line-height: 1.5; }
-@media (max-width: 650px) { .hero { width: calc(100% - 32px); padding: 135px 0 75px; } .hero h1 { margin-bottom: 42px; } }
+.hero {
+  width: min(var(--max), calc(100% - 48px));
+  margin: auto;
+  padding: 155px 0 85px;
+  border-bottom: 1px solid var(--line);
+}
+.hero > p {
+  margin: 0;
+  color: var(--orange);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.hero h1 {
+  max-width: 900px;
+  margin: 24px 0 48px;
+  font-family: var(--serif);
+  font-size: clamp(3.2rem, 7.5vw, 6.4rem);
+  font-weight: 400;
+  line-height: 0.94;
+  letter-spacing: -0.06em;
+}
+.text {
+  max-width: 570px;
+  margin-left: auto;
+  color: var(--muted);
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  line-height: 1.5;
+}
+@media (max-width: 650px) {
+  .hero {
+    width: calc(100% - 32px);
+    padding: 115px 0 60px;
+  }
+  .hero h1 {
+    margin-bottom: 32px;
+    font-size: clamp(2.8rem, 14vw, 4.5rem);
+  }
+}

@@ -4,7 +4,7 @@
 
 /* HERO */
 .hero {
-  min-height: 90svh;
+  min-height: 78svh;
   display: grid;
   grid-template-columns: minmax(0, 45%) minmax(0, 55%);
   background: var(--paper);
@@ -13,7 +13,7 @@
 .heroContent {
   position: relative;
   min-width: 0;
-  padding: 120px clamp(24px, 4vw, 70px) 42px
+  padding: 105px clamp(24px, 4vw, 70px) 34px
     max(24px, calc((100vw - var(--max)) / 2));
   display: flex;
   flex-direction: column;
@@ -31,7 +31,7 @@
 .heroImage {
   position: relative;
   min-width: 0;
-  height: 98svh;
+  height: 84svh;
   overflow: hidden;
 }
 
@@ -78,22 +78,22 @@
 
 .portfolio {
   color: var(--cobalt);
-  font-size: clamp(3.8rem, 6.7vw, 7.2rem);
+  font-size: clamp(3.5rem, 6vw, 6.2rem);
 }
 
 .name {
   margin: 0;
   color: var(--orange);
-  font-size: clamp(2.1rem, 3.2vw, 3.4rem);
+  font-size: clamp(2rem, 2.8vw, 2.8rem);
   line-height: 1.1;
   letter-spacing: -0.04em;
 }
 
 .titleDescription {
-  max-width: 500px;
-  margin: 28px 0 0;
+  max-width: 450px;
+  margin: 22px 0 0;
   color: var(--ink);
-  font-size: clamp(1rem, 1.4vw, 1.2rem);
+  font-size: clamp(0.95rem, 1.2vw, 1.08rem);
   line-height: 1.5;
   letter-spacing: normal;
 }
@@ -126,12 +126,11 @@
 }
 
 /* PROJECTS */
-/* PROJECTS */
 
 .projects {
   width: min(var(--max), calc(100% - 48px));
   margin: auto;
-  padding: 100px 0 130px;
+  padding: 75px 0 90px;
 }
 
 .sectionHeading {
@@ -162,23 +161,20 @@
 }
 
 .project {
-  padding: 48px 0;
+  padding: 40px 0;
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-  gap: clamp(30px, 6vw, 80px);
-  align-items: center;
+  grid-template-columns: minmax(260px, 0.7fr) minmax(450px, 1.3fr);
+  gap: clamp(32px, 5vw, 70px);
+  align-items: stretch;
   border-bottom: 1px solid var(--line);
 }
+
+/* PROJECT TEXT */
 
 .projectInfo {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-}
-
-.projectBody {
-  margin: auto 0;
-  padding: 25px 0;
 }
 
 .projectNumber {
@@ -191,10 +187,18 @@
   text-transform: uppercase;
 }
 
+.category {
+  margin: clamp(35px, 5vw, 60px) 0 12px;
+  color: var(--orange);
+  font-size: 0.7rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
 .projectInfo h2 {
   margin: 0;
   font-family: var(--serif);
-  font-size: clamp(2.1rem, 3.6vw, 3.9rem);
+  font-size: clamp(2.2rem, 3.7vw, 3.7rem);
   font-weight: 400;
   line-height: 0.95;
   letter-spacing: -0.065em;
@@ -208,49 +212,63 @@
   line-height: 1.6;
 }
 
+.projectLink {
+  width: max-content;
+  margin-top: auto;
+  padding-top: 30px;
+  padding-bottom: 6px;
+  color: var(--cobalt);
+  border-bottom: 1px solid var(--cobalt);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* PROJECT IMAGE */
+
 .visual {
-  width: 100%;
-  aspect-ratio: 16 / 10;
   position: relative;
+  min-height: 360px;
   display: grid;
   place-items: center;
   overflow: hidden;
-  background: #f3eee3;
 }
 
-.visual img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.letter {
+  font-family: var(--serif);
+  font-size: clamp(9rem, 18vw, 15rem);
+  line-height: 0.7;
+  letter-spacing: -0.12em;
+  transition: transform 650ms cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-.pubhubVisual {
-  isolation: isolate;
-  color: var(--paper);
-  background: var(--cobalt);
+.project:hover .letter {
+  transform: scale(1.035);
 }
 
-.pubhubVisual::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: -20%;
-  right: -5%;
-  width: 42%;
-  aspect-ratio: 1;
-  border-radius: 50%;
+.yellow {
+  color: var(--orange);
+  background: #f8e5bf;
+}
+
+.red {
+  color: var(--paper-light);
   background: var(--orange);
 }
 
-.pubhubVisual span {
-  font-size: clamp(3rem, 7vw, 6rem);
-  font-weight: 500;
-  letter-spacing: -0.075em;
+.green {
+  color: var(--paper-light);
+  background: var(--cobalt);
+}
+
+.blue {
+  color: var(--cobalt);
+  background: #dbe0fb;
 }
 
 .allProjects {
   display: inline-block;
-  margin-top: 60px;
+  margin-top: 42px;
   padding-bottom: 7px;
   border-bottom: 1px solid var(--cobalt);
 }
@@ -264,7 +282,7 @@
 
 .statement {
   position: relative;
-  padding: 110px max(24px, calc((100vw - var(--max)) / 2)) 125px;
+  padding: 80px max(24px, calc((100vw - var(--max)) / 2)) 90px;
   background: var(--paper-light);
 }
 
@@ -290,9 +308,9 @@
 
 .statement h2 {
   max-width: 950px;
-  margin: 30px 0 50px;
+  margin: 24px 0 38px;
   font-family: var(--serif);
-  font-size: clamp(2.5rem, 5vw, 5rem);
+  font-size: clamp(2.3rem, 4vw, 3.8rem);
   font-weight: 400;
   line-height: 1;
   letter-spacing: -0.06em;
@@ -302,13 +320,25 @@
   color: var(--cobalt);
   font-weight: 400;
 }
+
+/* TABLET */
+
 @media (max-width: 900px) {
   .project {
-    gap: 30px;
+    grid-template-columns: minmax(220px, 0.8fr) minmax(360px, 1.2fr);
+    gap: 35px;
+  }
+
+  .visual {
+    min-height: 340px;
   }
 
   .projectInfo h2 {
     font-size: clamp(2.3rem, 5vw, 3.5rem);
+  }
+
+  .category {
+    margin-top: 34px;
   }
 }
 
@@ -323,13 +353,13 @@
   }
 
   .heroContent {
-    min-height: 58svh;
-    padding: 100px 16px 36px;
+    min-height: 50svh;
+    padding: 92px 16px 28px;
   }
 
   .heroImage {
     min-height: 0;
-    height: 58svh;
+    height: 50svh;
   }
 
   .heroImage > img:first-child {
@@ -345,16 +375,16 @@
   }
 
   .title {
-    padding: 45px 0;
+    padding: 32px 0;
     line-height: 0.85;
   }
 
   .portfolio {
-    font-size: clamp(3.8rem, 16vw, 6rem);
+    font-size: clamp(3.4rem, 15vw, 4.8rem);
   }
 
   .name {
-    font-size: clamp(2rem, 8.5vw, 3rem);
+    font-size: clamp(1.9rem, 8vw, 2.5rem);
   }
 
   .heroBottom {
@@ -375,7 +405,7 @@
 
   .projects {
     width: calc(100% - 32px);
-    padding: 75px 0 90px;
+    padding: 60px 0 70px;
   }
 
   .sectionHeading {
@@ -383,22 +413,22 @@
   }
 
   .project {
-    padding: 42px 0;
+    padding: 38px 0;
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 26px;
   }
 
   .projectInfo {
     min-height: auto;
   }
 
-  .projectBody {
-    padding: 28px 0 0;
+  .category {
+    margin-top: 30px;
   }
 
   .projectInfo h2 {
-    font-size: clamp(2.5rem, 12vw, 3.6rem);
+    font-size: clamp(2.2rem, 10vw, 3rem);
   }
 
   .description {
@@ -406,22 +436,32 @@
     margin-top: 20px;
   }
 
+  .projectLink {
+    margin-top: 35px;
+    padding-top: 0;
+  }
+
   .visual {
-    flex: none;
+    min-height: 280px;
+    order: 2;
+  }
+
+  .letter {
+    font-size: clamp(8rem, 48vw, 12rem);
   }
 
   .allProjects {
-    margin-top: 50px;
+    margin-top: 38px;
   }
 
   /* STATEMENT */
 
   .statement {
-    padding: 80px 16px 95px;
+    padding: 65px 16px 75px;
   }
 
   .statement h2 {
-    margin: 25px 0 40px;
-    font-size: clamp(2.4rem, 11vw, 3.8rem);
+    margin: 22px 0 34px;
+    font-size: clamp(2.2rem, 10vw, 3.2rem);
   }
 }

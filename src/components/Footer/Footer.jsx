@@ -13,7 +13,7 @@ export default function Footer() {
         </div>
 
         <div className={styles.bottom}>
-          <p>© {new Date().getFullYear()} Mille Lauridsen</p>
+          <p>© {new Date().getFullYear()} Mille Høj Lauridsen</p>
           <div>
             <Link to="/work">Projekter</Link>
             <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">

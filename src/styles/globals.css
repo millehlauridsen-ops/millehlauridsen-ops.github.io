@@ -1,12 +1,13 @@
 :root {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #171717;
-  background: #f5f0e8;
+  background: #fffef6;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
+
   --ink: #171717;
-  --paper: #f5f0e8;
-  --paper-light: #fbf8f2;
+  --paper: #fffef6;
+  --paper-light: #fffefa;
   --orange: #ef5a24;
   --cobalt: #3d4fe0;
   --muted: #77736d;
@@ -15,15 +16,48 @@
   --serif: Georgia, "Times New Roman", serif;
 }
 
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { margin: 0; min-width: 320px; background: var(--paper); }
-body, button, a { -webkit-font-smoothing: antialiased; }
-a { color: inherit; text-decoration: none; }
-button { font: inherit; }
-img { display: block; max-width: 100%; }
-main { min-height: 80vh; }
-::selection { color: var(--paper-light); background: var(--cobalt); }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--paper);
+}
+
+body,
+button,
+a {
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+main {
+  min-height: 80vh;
+}
+
+::selection {
+  color: var(--paper-light);
+  background: var(--cobalt);
+}
 
 .sr-only {
   position: absolute;
@@ -38,8 +72,13 @@ main { min-height: 80vh; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  *, *::before, *::after {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;

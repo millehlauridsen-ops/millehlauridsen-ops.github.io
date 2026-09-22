@@ -19,45 +19,18 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 0%;
+  right: 4%;
   z-index: 0;
+  width: min(48vw, 65svh);
 
-  width: 100%;
-
-  background-image:
-    linear-gradient(
-      to right,
-      var(--paper) 0%,
-      rgba(245, 240, 232, 0.8) 9%,
-      rgba(245, 240, 232, 0) 28%
-    ),
-    linear-gradient(rgba(255, 213, 144, 0.2), rgba(255, 228, 186, 0.15)),
-    url("../../assets/images/bredtbillede.png");
-  background-size: auto 130%;
-  background-position: left center;
+  background-image: url("../../assets/images/mig.jpeg");
+  background-size: contain;
+  background-position: center bottom;
   background-repeat: no-repeat;
 
-  /*
-   * Gør billedets venstre kant gennemsigtig og
-   * lader det gradvist blive helt synligt.
-   */
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    rgba(0, 0, 0, 0.2) 5%,
-    rgba(0, 0, 0, 0.65) 11%,
-    black 19%
-  );
-
-  mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    rgba(0, 0, 0, 0.2) 5%,
-    rgba(0, 0, 0, 0.65) 11%,
-    black 19%
-  );
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 23%);
+  mask-image: linear-gradient(to right, transparent 0%, #000 23%);
 }
-
 .hero > * {
   position: relative;
   z-index: 1;
@@ -336,35 +309,16 @@
   }
 
   .hero::before {
-    top: 85px;
-    bottom: 150px;
-    left: 30%;
-
+    top: 90px;
+    bottom: 135px;
+    right: -9%;
     width: 70%;
 
-    /*
-     * Personen vises i fuld højde inden for
-     * sit eget område i højre side.
-     */
-    background-size: auto 100%;
+    background-size: contain;
     background-position: center bottom;
-    background-repeat: no-repeat;
 
-    -webkit-mask-image: linear-gradient(
-      to right,
-      transparent 0%,
-      rgba(0, 0, 0, 0.2) 8%,
-      rgba(0, 0, 0, 0.65) 17%,
-      black 28%
-    );
-
-    mask-image: linear-gradient(
-      to right,
-      transparent 0%,
-      rgba(0, 0, 0, 0.2) 8%,
-      rgba(0, 0, 0, 0.65) 17%,
-      black 28%
-    );
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 30%);
+    mask-image: linear-gradient(to right, transparent 0%, #000 30%);
   }
 
   .heroTop {
@@ -409,7 +363,7 @@
     background: linear-gradient(
       to bottom,
       transparent 0%,
-      rgba(245, 240, 232, 0.92) 42%,
+      rgba(255, 254, 246, 0.92) 42%,
       var(--paper) 70%
     );
   }

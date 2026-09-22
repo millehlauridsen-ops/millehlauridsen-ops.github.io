@@ -1,10 +1,40 @@
 import { Link } from "react-router-dom";
 import Reveal from "../../components/Reveal/Reveal";
-import { projects } from "../../data/projects";
 import portrait from "../../assets/images/mig.jpeg";
 import circles from "../../assets/graphics/stororangegul.svg";
 import blueLines from "../../assets/graphics/blaastreger.svg";
+import beerLabels from "../../assets/projects/beerlabels.png";
+import moviePoster from "../../assets/projects/movieposter.png";
 import styles from "./HomePage.module.css";
+
+const featuredProjects = [
+  {
+    number: "01",
+    title: "Øletiketter til Anarkist",
+    category: "Emballagedesign · Grafisk design",
+    description:
+      "Tre forskellige øl, tre visuelle fortællinger og én samlet serie af etiketter.",
+    image: beerLabels,
+    imageAlt:
+      "Tre øldåser med etiketterne Free Spirit, Smoked Rebel og Dark Manifest",
+  },
+  {
+    number: "02",
+    title: "PubHub",
+    category: "Appdesign · UX/UI · React",
+    description:
+      "Et appkoncept, der gør det lettere at opdage nye barer og oplevelser i Aarhus.",
+  },
+  {
+    number: "03",
+    title: "Løbet",
+    category: "Plakatdesign · Visuel fortælling",
+    description:
+      "En filmplakat, hvor komposition og billedbehandling omsætter en aktuel uro til et visuelt udtryk.",
+    image: moviePoster,
+    imageAlt: "Filmplakaten Løbet vist på en plakatvæg",
+  },
+];
 
 export default function HomePage() {
   return (
@@ -54,30 +84,35 @@ export default function HomePage() {
         </div>
 
         <div className={styles.projectList}>
-          {projects.slice(0, 3).map((project) => (
-            <Reveal key={project.slug}>
-              <Link to={`/work/${project.slug}`} className={styles.project}>
+          {featuredProjects.map((project) => (
+            <Reveal key={project.number}>
+              <article className={styles.project}>
                 <div className={styles.projectInfo}>
                   <div className={styles.projectNumber}>
                     <span>{project.number}</span>
-                    <span>{project.year}</span>
+                    <span>{project.category}</span>
                   </div>
 
-                  <div>
-                    <p className={styles.category}>{project.category}</p>
-
+                  <div className={styles.projectBody}>
                     <h2>{project.title}</h2>
-
-                    <p className={styles.description}>{project.intro}</p>
+                    <p className={styles.description}>{project.description}</p>
                   </div>
-
-                  <span className={styles.projectLink}>Se projekt ↗</span>
                 </div>
 
-                <div className={`${styles.visual} ${styles[project.color]}`}>
-                  <span className={styles.letter}>{project.letter}</span>
+                <div
+                  className={`${styles.visual} ${!project.image ? styles.pubhubVisual : ""}`}
+                >
+                  {project.image ? (
+                    <img
+                      src={project.image}
+                      alt={project.imageAlt}
+                      loading="lazy"
+                    />
+                  ) : (
+                    <span>PubHub</span>
+                  )}
                 </div>
-              </Link>
+              </article>
             </Reveal>
           ))}
         </div>

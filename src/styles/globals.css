@@ -4,24 +4,14 @@
   font-family: "Jost", sans-serif;
   color: #444132;
   background: #fffceb;
-
-  --ink: #444132;
-  --paper: #fffceb;
-  --serif: "Jost", sans-serif;
-}
-
-:root {
-  font-family: "Jost", sans-serif;
-  color: #444132;
-  background: #fffceb;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
 
   --ink: #444132;
   --paper: #fffceb;
   --paper-light: #fffefa;
-  --orange: #ef5a24;
-  --cobalt: #3d4fe0;
+  --orange: #ff5715;
+  --cobalt: #2b6eff;
   --muted: #77736d;
   --line: rgba(23, 23, 23, 0.18);
   --max: 1280px;

@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import Reveal from "../../components/Reveal/Reveal";
 import { projects } from "../../data/projects";
 import portrait from "../../assets/images/mig.jpeg";
+import circles from "../../assets/graphics/stororangegul.svg";
+import blueLines from "../../assets/graphics/blaastreger.svg";
 import styles from "./HomePage.module.css";
 
 export default function HomePage() {
@@ -9,6 +11,12 @@ export default function HomePage() {
     <div className={styles.page}>
       <section className={styles.hero}>
         <div className={styles.heroContent}>
+          <img
+            className={styles.heroCircles}
+            src={circles}
+            alt=""
+            aria-hidden="true"
+          />
           <div className={styles.heroTop}>
             <p>Grafisk design & visuel kommunikation</p>
             <p>Aarhus · Danmark</p>
@@ -30,6 +38,12 @@ export default function HomePage() {
 
         <div className={styles.heroImage}>
           <img src={portrait} alt="Portræt af Mille Lauridsen" />
+          <img
+            className={styles.heroLines}
+            src={blueLines}
+            alt=""
+            aria-hidden="true"
+          />
         </div>
       </section>
 
@@ -46,12 +60,14 @@ export default function HomePage() {
                 <div className={styles.projectInfo}>
                   <div className={styles.projectNumber}>
                     <span>{project.number}</span>
-                    <span>{project.name}</span>
+                    <span>{project.year}</span>
                   </div>
 
                   <div>
                     <p className={styles.category}>{project.category}</p>
+
                     <h2>{project.title}</h2>
+
                     <p className={styles.description}>{project.intro}</p>
                   </div>
 

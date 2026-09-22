@@ -1,0 +1,6 @@
+.list { width: min(var(--max),calc(100% - 48px)); margin: 80px auto 160px; }
+.list article { padding: 42px 0; display: grid; grid-template-columns: 70px 1.1fr 1fr; gap: 35px; align-items: start; border-top: 1px solid var(--line); }
+.list span { color: var(--orange); font-size: .72rem; letter-spacing: .09em; }
+.list h2 { margin: 0; color: var(--cobalt); font-family: var(--serif); font-size: clamp(2.3rem,4.7vw,4.7rem); font-weight: 400; line-height: 1; letter-spacing: -.06em; }
+.list p { max-width: 450px; margin: 8px 0; color: var(--muted); line-height: 1.65; }
+@media (max-width: 700px) { .list { width: calc(100% - 32px); margin-bottom: 100px; } .list article { grid-template-columns: 40px 1fr; } .list p { grid-column: 2; } }

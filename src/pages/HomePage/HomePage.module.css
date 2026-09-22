@@ -80,11 +80,13 @@
   gap: 22px;
 }
 
-.heroBottom p {
+.titleDescription {
   max-width: 500px;
-  margin: 0;
+  margin: 28px 0 0;
+  color: var(--ink);
   font-size: clamp(1rem, 1.4vw, 1.2rem);
   line-height: 1.5;
+  letter-spacing: normal;
 }
 
 .heroBottom a,
@@ -340,10 +342,9 @@
     gap: 18px;
   }
 
-  .heroBottom p {
+  .titleDescription {
     max-width: 420px;
     font-size: 0.9rem;
-    line-height: 1.5;
   }
 
   .heroBottom a {

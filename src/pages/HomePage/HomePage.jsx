@@ -17,15 +17,14 @@ export default function HomePage() {
           <div className={styles.title}>
             <span className={styles.portfolio}>Portfolio</span>
             <span className={styles.name}>Mille Høj Lauridsen</span>
-          </div>
-
-          <div className={styles.heroBottom}>
-            <p>
+            <p className={styles.titleDescription}>
               Jeg skaber visuelle identiteter, kampagner og digitale oplevelser
               med et klart koncept og et personligt udtryk.
             </p>
+          </div>
 
-            <a href="#projects">Se udvalgte projekter ↓</a>
+          <div className={styles.heroBottom}>
+            <a href="#projects">Se udvalgte produkter ↓</a>
           </div>
         </div>
 

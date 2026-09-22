@@ -1,7 +1,134 @@
+import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import Reveal from "../../components/Reveal/Reveal";
 import { projects } from "../../data/projects";
 import styles from "./ProjectPage.module.css";
+
+function AnarkistCarousel({ images }) {
+  const [pairIndex, setPairIndex] = useState(0);
+  const [labelIndex, setLabelIndex] = useState(0);
+  const [detailIndex, setDetailIndex] = useState(0);
+
+  const pairs = [0, 2, 4].map((start) => images.slice(start, start + 2));
+  const labels = images.filter((_, index) => index % 2 === 0);
+  const details = images.filter((_, index) => index % 2 === 1);
+
+  return (
+    <section
+      className={styles.carousel}
+      aria-label="Anarkist-etiketter og detaljer"
+    >
+      <div className={styles.desktopCarousel}>
+        <div
+          className={styles.desktopTrack}
+          style={{ transform: `translateX(-${pairIndex * 100}%)` }}
+        >
+          {pairs.map((pair, index) => (
+            <div className={styles.carouselPair} key={index}>
+              {pair.map((image) => (
+                <img
+                  key={image.src}
+                  src={image.src}
+                  alt={image.alt}
+                  loading="lazy"
+                />
+              ))}
+            </div>
+          ))}
+        </div>
+
+        <button
+          className={`${styles.carouselButton} ${styles.previousButton}`}
+          type="button"
+          aria-label="Forrige to billeder"
+          onClick={() =>
+            setPairIndex((index) => (index + pairs.length - 1) % pairs.length)
+          }
+        >
+          ←
+        </button>
+
+        <button
+          className={`${styles.carouselButton} ${styles.nextButton}`}
+          type="button"
+          aria-label="Næste to billeder"
+          onClick={() => setPairIndex((index) => (index + 1) % pairs.length)}
+        >
+          →
+        </button>
+
+        <span className={styles.carouselCount} aria-live="polite">
+          {pairIndex + 1} / {pairs.length}
+        </span>
+      </div>
+
+      <div className={styles.mobileCarousels}>
+        {[
+          {
+            title: "Etiketterne",
+            items: labels,
+            index: labelIndex,
+            setIndex: setLabelIndex,
+          },
+          {
+            title: "Detaljerne",
+            items: details,
+            index: detailIndex,
+            setIndex: setDetailIndex,
+          },
+        ].map(({ title, items, index, setIndex }) => (
+          <div className={styles.mobileCarouselBlock} key={title}>
+            <h2>{title}</h2>
+
+            <div className={styles.mobileCarousel}>
+              <div
+                className={styles.mobileTrack}
+                style={{ transform: `translateX(-${index * 100}%)` }}
+              >
+                {items.map((image) => (
+                  <img
+                    key={image.src}
+                    src={image.src}
+                    alt={image.alt}
+                    loading="lazy"
+                  />
+                ))}
+              </div>
+
+              <button
+                className={`${styles.carouselButton} ${styles.previousButton}`}
+                type="button"
+                aria-label={`Forrige billede: ${title.toLowerCase()}`}
+                onClick={() =>
+                  setIndex(
+                    (current) => (current + items.length - 1) % items.length,
+                  )
+                }
+              >
+                ←
+              </button>
+
+              <button
+                className={`${styles.carouselButton} ${styles.nextButton}`}
+                type="button"
+                aria-label={`Næste billede: ${title.toLowerCase()}`}
+                onClick={() =>
+                  setIndex((current) => (current + 1) % items.length)
+                }
+              >
+                →
+              </button>
+
+              <span className={styles.carouselCount} aria-live="polite">
+                {index + 1} / {items.length}
+              </span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
 
 export default function ProjectPage() {
   const { slug } = useParams();
@@ -28,11 +155,14 @@ export default function ProjectPage() {
           </span>
           {project.year && <span>{project.year}</span>}
         </div>
+
         <h1>{project.title}</h1>
         <p>{project.intro}</p>
       </header>
 
-      <div className={styles.cover}>
+      <div
+        className={`${styles.cover} ${project.cover ? styles.coverFull : ""}`}
+      >
         {project.cover ? (
           <img
             className={styles.coverImage}
@@ -53,13 +183,14 @@ export default function ProjectPage() {
         <section className={styles.overview}>
           <div>
             <p className={styles.label}>Discipliner</p>
+            <span>{project.services}</span>
+
             {project.tools && (
               <>
                 <p className={styles.label}>Værktøjer</p>
                 <span>{project.tools}</span>
               </>
             )}
-            <span>{project.services}</span>
           </div>
 
           <div>
@@ -118,7 +249,6 @@ export default function ProjectPage() {
         <Reveal>
           <section className={styles.reflection}>
             <h2>Refleksion</h2>
-
             <div>
               {(Array.isArray(project.reflection)
                 ? project.reflection
@@ -155,10 +285,16 @@ export default function ProjectPage() {
         </section>
       )}
 
-      {project.gallery?.length > 0 && (
+      {project.slug === "anarkist-etiketter" && project.gallery?.length > 0 && (
+        <AnarkistCarousel images={project.gallery} />
+      )}
+
+      {project.slug !== "anarkist-etiketter" && project.gallery?.length > 0 && (
         <section
           className={`${styles.gallery} ${
             project.slug === "spotify-shorts" ? styles.videoGallery : ""
+          } ${
+            project.slug === "loebet-filmplakat" ? styles.posterGallery : ""
           }`}
           aria-label="Billeder og videoer fra projektet"
         >

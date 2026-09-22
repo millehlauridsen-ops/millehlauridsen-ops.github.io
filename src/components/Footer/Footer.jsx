@@ -7,11 +7,19 @@ export default function Footer() {
       <div className={styles.inner}>
         <div>
           <p className={styles.kicker}>Har du et projekt i tankerne?</p>
-          <a className={styles.mail} href="mailto:dinmail@example.com">Lad os arbejde sammen ↗</a>
+          <Link className={styles.mail} to="/contact">
+            Lad os arbejde sammen ↗
+          </Link>
         </div>
+
         <div className={styles.bottom}>
           <p>© {new Date().getFullYear()} Mille Lauridsen</p>
-          <div><Link to="/work">Projekter</Link><a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a></div>
+          <div>
+            <Link to="/work">Projekter</Link>
+            <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">
+              LinkedIn
+            </a>
+          </div>
         </div>
       </div>
     </footer>

@@ -42,12 +42,12 @@
 .coverImage,
 .coverGraphic {
   width: 100%;
-  aspect-ratio: 16 / 10;
+  height: 30vh;
 }
 
 .coverImage {
   display: block;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .coverGraphic {
@@ -457,5 +457,200 @@
 
   .reflection {
     margin-bottom: 75px;
+  }
+}
+/* ANARKIST-KARRUSEL */
+
+.carousel {
+  width: 100%;
+  margin: 0 auto 110px;
+}
+
+.desktopCarousel {
+  position: relative;
+  overflow: hidden;
+  background: var(--paper-light);
+}
+
+.desktopTrack {
+  display: flex;
+  transition: transform 600ms ease;
+}
+
+.carouselPair {
+  min-width: 100%;
+  height: 70vh;
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+
+.carouselPair img {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+}
+
+.carouselButton {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 1.4rem;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.carouselButton:hover {
+  background: var(--orange);
+  color: var(--paper);
+}
+
+.carouselButton:focus-visible {
+  outline: 3px solid var(--cobalt);
+  outline-offset: 3px;
+}
+
+.previousButton {
+  left: 20px;
+}
+
+.nextButton {
+  right: 20px;
+}
+
+.carouselCount {
+  position: absolute;
+  right: 22px;
+  bottom: 18px;
+  padding: 5px 10px;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 0.75rem;
+}
+
+.mobileCarousels {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .coverGraphic strong {
+    font-size: clamp(1.8rem, 9vw, 3.5rem);
+  }
+
+  .desktopCarousel {
+    display: none;
+  }
+
+  .mobileCarousels {
+    display: grid;
+    gap: 55px;
+  }
+
+  .mobileCarouselBlock h2 {
+    margin: 0;
+    padding: 0 16px 18px;
+    color: var(--orange);
+    font-size: 0.78rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .mobileCarousel {
+    position: relative;
+    overflow: hidden;
+    background: var(--paper-light);
+  }
+
+  .mobileTrack {
+    display: flex;
+    transition: transform 500ms ease;
+  }
+
+  .mobileTrack img {
+    width: 100%;
+    min-width: 100%;
+    height: auto;
+    max-height: 75vh;
+    object-fit: contain;
+  }
+
+  .carouselButton {
+    width: 44px;
+    height: 44px;
+  }
+
+  .previousButton {
+    left: 12px;
+  }
+
+  .nextButton {
+    right: 12px;
+  }
+}
+/* Billed-covers går til begge kanter og er 60vh høje.
+   Farvede covers beholder deres eksisterende højde på 30vh. */
+
+.coverFull {
+  width: 100%;
+}
+
+.coverImage {
+  width: 100%;
+  height: 60vh;
+  display: block;
+  object-fit: cover;
+}
+
+/* Løbet: de to plakatbilleder fylder tilsammen hele bredden. */
+
+.posterGallery {
+  width: 100%;
+  grid-template-columns: 30% 70%;
+  gap: 0;
+}
+
+.posterGallery > :first-child {
+  grid-column: auto;
+}
+
+.posterGallery .figure {
+  height: 70vh;
+  overflow: hidden;
+}
+
+.posterGallery .figure img {
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  object-fit: cover;
+}
+
+.posterGallery .figure figcaption {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .coverFull,
+  .posterGallery {
+    width: 100%;
+  }
+
+  .posterGallery {
+    grid-template-columns: 30% 70%;
+    gap: 0;
+  }
+
+  .posterGallery .figure {
+    height: 50vh;
   }
 }

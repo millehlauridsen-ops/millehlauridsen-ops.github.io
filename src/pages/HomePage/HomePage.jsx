@@ -5,10 +5,12 @@ import circles from "../../assets/graphics/stororangegul.svg";
 import blueLines from "../../assets/graphics/blaastreger.svg";
 import beerLabels from "../../assets/projects/beerlabels.png";
 import moviePoster from "../../assets/projects/movieposter.png";
+import pubHubImage from "../../assets/projects/pubhubposter.png";
 import styles from "./HomePage.module.css";
 
 const featuredProjects = [
   {
+    slug: "anarkist-etiketter",
     number: "01",
     title: "Øletiketter til Anarkist",
     category: "Emballagedesign · Grafisk design",
@@ -19,13 +21,17 @@ const featuredProjects = [
       "Tre øldåser med etiketterne Free Spirit, Smoked Rebel og Dark Manifest",
   },
   {
+    slug: "pubhub",
     number: "02",
     title: "PubHub",
     category: "Appdesign · UX/UI · React",
     description:
       "Et appkoncept, der gør det lettere at opdage nye barer og oplevelser i Aarhus.",
+    image: pubHubImage,
+    imageAlt: "Skærmbillede fra PubHub-applikationen",
   },
   {
+    slug: "loebet-filmplakat",
     number: "03",
     title: "Løbet",
     category: "Plakatdesign · Visuel fortælling",
@@ -86,8 +92,12 @@ export default function HomePage() {
 
         <div className={styles.projectList}>
           {featuredProjects.map((project) => (
-            <Reveal key={project.number}>
-              <article className={styles.project}>
+            <Reveal key={project.slug}>
+              <Link
+                to={`/work/${project.slug}`}
+                className={styles.project}
+                aria-label={`Læs mere om ${project.title}`}
+              >
                 <div className={styles.projectInfo}>
                   <div className={styles.projectNumber}>
                     <span>{project.number}</span>
@@ -96,24 +106,19 @@ export default function HomePage() {
 
                   <div className={styles.projectBody}>
                     <h2>{project.title}</h2>
+
                     <p className={styles.description}>{project.description}</p>
                   </div>
                 </div>
 
-                <div
-                  className={`${styles.visual} ${!project.image ? styles.pubhubVisual : ""}`}
-                >
-                  {project.image ? (
-                    <img
-                      src={project.image}
-                      alt={project.imageAlt}
-                      loading="lazy"
-                    />
-                  ) : (
-                    <span>PubHub</span>
-                  )}
+                <div className={styles.visual}>
+                  <img
+                    src={project.image}
+                    alt={project.imageAlt}
+                    loading="lazy"
+                  />
                 </div>
-              </article>
+              </Link>
             </Reveal>
           ))}
         </div>

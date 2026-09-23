@@ -36,7 +36,13 @@ const competences = [
   },
 ];
 
-const primaryTools = ["Figma", "Visual Studio Code", "React", "Git og GitHub"];
+const primaryTools = [
+  "Figma",
+  "Visual Studio Code",
+  "React",
+  "Git og GitHub",
+  "AI",
+];
 
 const additionalTools = [
   "Adobe Illustrator",

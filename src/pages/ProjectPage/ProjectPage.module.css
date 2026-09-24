@@ -53,6 +53,51 @@
   height: 60vh;
   object-fit: cover;
 }
+.coverMedia {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+}
+
+.coverMedia .coverImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.coverOverlay {
+  position: absolute;
+  inset: 0;
+  padding: 32px max(24px, calc((100vw - var(--max)) / 2));
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: #fffef6;
+  background: linear-gradient(
+    to top,
+    rgba(23, 23, 23, 0.82) 0%,
+    rgba(23, 23, 23, 0.42) 32%,
+    rgba(23, 23, 23, 0.08) 62%,
+    transparent 78%
+  );
+}
+
+.coverOverlay span {
+  margin-bottom: 12px;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.coverOverlay strong {
+  max-width: 900px;
+  font-family: var(--serif);
+  font-size: clamp(2.8rem, 7vw, 6rem);
+  font-weight: 400;
+  line-height: 0.9;
+  letter-spacing: -0.06em;
+}
 
 .coverGraphic {
   width: 100%;
@@ -255,18 +300,37 @@
 }
 
 .phone {
-  width: min(360px, 88vw);
-  aspect-ratio: 9 / 19;
+  position: relative;
+
+  width: min(300px, 75vw);
+  aspect-ratio: 390 / 844;
+
   margin: auto;
+  overflow: hidden;
+
+  background: #000;
   border: 2px solid var(--ink);
-  border-radius: 42px;
+  border-radius: 38px;
+
+  box-shadow: 0 24px 60px rgba(23, 23, 23, 0.16);
 }
 
 .browser iframe,
 .phone iframe {
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 130%;
+  height: 130%;
+
+  display: block;
+  margin: 0;
+  padding: 0;
   border: 0;
+
+  transform: scale(0.76923);
+  transform-origin: top left;
 }
 
 .gallery {
@@ -549,5 +613,197 @@
 
   .next {
     padding: 58px 16px;
+  }
+}
+
+.figmaPreview {
+  padding: 80px max(24px, calc((100vw - var(--max)) / 2));
+  background: var(--paper);
+}
+
+.figmaPreviewHeading {
+  margin-bottom: 28px;
+  padding-bottom: 18px;
+  display: grid;
+  grid-template-columns: 1fr minmax(280px, 440px);
+  align-items: end;
+  gap: 50px;
+  border-bottom: 1px solid var(--line);
+}
+
+.figmaPreviewHeading span {
+  color: var(--orange);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.figmaPreviewHeading h2 {
+  margin: 12px 0 0;
+  font-family: var(--serif);
+  font-size: clamp(2rem, 3.6vw, 3.4rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.figmaPreviewHeading p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.figmaDesktopPreview {
+  height: min(72vh, 760px);
+  overflow: hidden;
+  background: var(--paper-light);
+  border: 1px solid var(--line);
+}
+
+.figmaDesktopPreview iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.figmaResponsiveLink {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .figmaPreview {
+    padding: 60px 24px;
+  }
+
+  .figmaPreviewHeading {
+    margin-bottom: 24px;
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .figmaDesktopPreview {
+    display: none;
+  }
+
+  .figmaResponsiveLink {
+    width: max-content;
+    display: inline-block;
+    padding-bottom: 5px;
+    color: var(--cobalt);
+    border-bottom: 1px solid currentColor;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+}
+
+@media (max-width: 760px) {
+  .figmaPreview {
+    padding: 55px 16px;
+  }
+}
+.phoneLive {
+  position: relative;
+  min-height: 680px;
+  display: grid;
+  grid-template-columns: minmax(260px, 0.8fr) minmax(320px, 1.2fr);
+  align-items: center;
+  gap: clamp(50px, 8vw, 120px);
+  overflow: hidden;
+  background: var(--paper-light);
+}
+
+.phoneLive::before {
+  content: "";
+  position: relative;
+  z-index: 0;
+
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: center;
+  align-self: center;
+
+  width: clamp(340px, 36vw, 520px);
+  aspect-ratio: 1;
+  background: #f8d65d;
+  border-radius: 50%;
+}
+
+.phoneLive .liveHeading {
+  position: relative;
+  z-index: 1;
+  max-width: 430px;
+  margin: 0;
+  display: block;
+  border-bottom: 0;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.phoneLive .liveHeading span {
+  display: block;
+  margin-bottom: 18px;
+}
+
+.phoneLive .liveHeading h2 {
+  margin: 0 0 22px;
+  font-family: var(--serif);
+  font-size: clamp(2.5rem, 4.5vw, 4.5rem);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: -0.055em;
+}
+
+.phoneLive .liveHeading p {
+  max-width: 390px;
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.phoneLive .phone {
+  position: relative;
+  z-index: 1;
+  width: min(280px, 75vw);
+  justify-self: center;
+  border-radius: 38px;
+  box-shadow: 0 24px 60px rgba(23, 23, 23, 0.16);
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.phoneLive .phone iframe {
+  display: block;
+  border-radius: 36px;
+}
+
+@media (max-width: 760px) {
+  .phoneLive {
+    min-height: auto;
+    padding: 60px 16px 70px;
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .phoneLive::before {
+    grid-column: 1;
+    grid-row: 2;
+    width: min(105vw, 420px);
+  }
+
+  .phoneLive .liveHeading {
+    max-width: 500px;
+  }
+
+  .phoneLive .liveHeading h2 {
+    font-size: clamp(2.5rem, 12vw, 3.8rem);
+  }
+
+  .phoneLive .phone {
+    width: min(250px, 72vw);
+    grid-column: 1;
+    grid-row: 2;
+    width: min(250px, 72vw);
   }
 }

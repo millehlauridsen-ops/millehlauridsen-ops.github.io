@@ -10,6 +10,9 @@ import movieDetail from "../assets/projects/movieposter1.png";
 import spotifyCover from "../assets/projects/enesterus.png";
 import minEnesteRus from "../assets/projects/Barselona_minEnesteRus.mp4";
 import hot from "../assets/projects/EmilKruse_hot.mp4";
+import luminaCover from "../assets/projects/luminaScreenshot.png";
+import sundhedsshoppenCover from "../assets/projects/sundhedsshoppenScreenshot.png";
+import pubhubCover from "../assets/projects/pubhubposter.png";
 
 export const projects = [
   {
@@ -88,7 +91,7 @@ export const projects = [
       {
         heading: "Om projektet",
         paragraphs: [
-          "PubHub var eksamensprojektet i WebApp på 2. semester. Opgaven var at skabe et appkoncept og designe og kode en responsiv webapp med React.",
+          "PubHub var eksamensprojektet i WebApp på 2. semester. Opgaven var at skabe et appkoncept og designe og kode en responsiv webapp med React - og oprette dataen i en ekstern database (SupaBase).",
         ],
       },
       {
@@ -103,17 +106,22 @@ export const projects = [
         paragraphs: [
           "Vi ville virkelig have hænderne i projektet, eksperimentere og arbejde grundigt med idéerne. Derfor begyndte vi med papirskitser og enkle wireframes, før vi gik videre til detaljerede designs i Figma.",
           "Den tilgang gav os mulighed for at afprøve idéer og være kreative i længere tid, end vi oplever, når vi starter direkte på skærmen.",
+          "Vi inddrog brugerne tidligt i processen med test på wireframes for at få feedback og justere vores idéer - hvad var godt, hvad forvirrede? Hvilke funktioner var mest relevante? Det gav os et godt grundlag for at udvikle en prototype, som vi kunne teste mere detaljeret.",
         ],
       },
       {
         heading: "…PubHub?",
         paragraphs: [
-          "Ja, vi ved det godt. Vi ville skabe et design, der var sjovt, engagerende og fik folk til at vende hovedet. Vi lod os inspirere af Pornhubs meget genkendelige visuelle identitet og oplevede, at folk blev nysgerrige på vores koncept. Det var et eksperiment, og det virkede, som vi havde håbet.",
+          "Ja, vi ved det godt. Vi ville skabe et design, der var sjovt, engagerende og fik folk til at vende hovedet. Vi lod os inspirere af Pornhubs meget genkendelige visuelle identitet og oplevede, at folk blev nysgerrige på vores koncept.",
+          "Det var et eksperiment, og det virkede, som vi havde håbet.",
         ],
       },
     ],
     reflection:
-      "Arbejdet fra skitse til webapp fik mig til at tænke over, hvor hurtigt man skal kunne orientere sig på mobilen, når man er på vej videre i byen. Hvis jeg skulle udvikle PubHub videre, ville jeg afprøve den med brugere i netop den situation og se, hvilke oplysninger de faktisk har brug for først.",
+      "PubHub lærte mig, hvor meget brugerens konkrete situation kan påvirke det interface, vi udvikler. Et design kan godt være visuelt stærkt uden at blive svært at bruge, hvis hierarki og handlinger er tydelige og intuitive for den, der skal bruge det.",
+    cover: pubhubCover,
+    coverAlt: "Pubhub Poster",
+    coverPosition: "center center",
     theme: "pubhub",
     previewUrl: "https://eaa25mtha.github.io/webapp-eksamen/",
     previewKind: "phone",
@@ -247,11 +255,31 @@ export const projects = [
         heading: "Om projektet",
         paragraphs: [
           "Eksamensprojekt fra 1. semester med fokus på designsystem, komponenter og interaktivitet.",
+          "Opgaven bestod i at skulle optimere og forbedre et tidligere projekt på 1. semester.",
+        ],
+      },
+      {
+        heading: "Proces",
+        paragraphs: [
+          "Jeg tog udgangspunkt i det første projekt på 1. semester.",
+          "Jeg arbejdede med at omsætte designsystemet til interaktive komponenter, gøre siden mere æstetisk tiltalende og brugervenlig. Derudover arbejdede jeg på at forbedre og optimere min kode - som jeg sidenhen har lært meget mere om. Dette var det sidste projekt, vi kodede uden React.js",
+          "I Figma arbejdede jeg med at skabe en prototype, der kunne demonstrere de interaktive elementer og komponenter - samt opsætte et godt designsystem med det udgangspunkt, at en anden skulle kunne overtage min prototype.",
+        ],
+      },
+      {
+        heading: "Oprindeligt projekt",
+        paragraphs: [
+          "Vores opgave bestod i at designe en Landingsside for Lumina One - en højtaler designet til unge, sociale kvinder i uddannelse.",
+          "Vi satte fokus på at skabe en visuel identitet, der appellerede til målgruppen - både by day og by night.",
+          "Der er helt klart flere ting, jeg kunne og ville have forbedret - særligt designmæssigt. Men med den tid og de evner, jeg havde på det givne tidspunkt, er jeg stolt af, hvor langt jeg kom og den læring, jeg har taget med mig.",
         ],
       },
     ],
     reflection:
-      "Projektet gav mig anledning til at se design og udvikling i sammenhæng: Et visuelt system skal også fungere, når det bliver til klikbare komponenter på en rigtig hjemmeside.",
+      "I dette projekt oplevede jeg en stor tilfredsstillelse i at optimere og forbedre kode, design og system. Det var en lærerig proces, hvor jeg kunne se, hvordan små ændringer kunne have stor indflydelse på det endelige resultat - funktionalitet og oplevelse. Jeg har sidenhen brugt denne erfaring og tilfredsstillelse som et springbræt til det detaljerede arbejde med designsystemer, komponenter og interaktivitet.",
+    cover: luminaCover,
+    coverAlt: "Skærmbillede af Lumina One-hjemmesiden",
+    coverPosition: "center center",
     theme: "lumina",
     previewUrl: "https://millehlauridsen-ops.github.io/LuminaOneExam/",
     previewKind: "browser",
@@ -287,9 +315,22 @@ export const projects = [
           "Et Customer Experience-projekt med fokus på målgruppe, visuel identitet og brugerrejser.",
         ],
       },
+      {
+        heading: "Proces",
+        paragraphs: [
+          "I dette projekt arbejdede vi med at kortlægge brugerrejsen og identificere de vigtigste touchpoints. Vi udviklede en visuel identitet, der understøttede brugerens oplevelse og ego - hvad er vigtigt for dem? Hvem er de?",
+        ],
+      },
+      {
+        heading: "Research",
+        paragraphs: [
+          "Vi havde ikke tid eller ressourcer til at teste vores målgruppe i dybden, hvilket kunne have afkræftet eller bekræftet nogle af de antagelser vi lavede, men vi var meget opmærksomme på det undervejs.",
+          "Vi arbejdede med brugerresearch og data (statistik, rapporter mm.) for at informere vores designbeslutninger og sikre, at vi adresserede de rigtige behov - dette er dog stadig bare antagelser, man på det rigtige marked ville skulle validere og teste.",
+        ],
+      },
     ],
     reflection:
-      "Jeg ser projektet som en øvelse i at holde den visuelle retning og brugerens oplevelse samlet. De valg, man træffer i identiteten, skal også give mening, når en person bevæger sig rundt på siden.",
+      "Jeg ser projektet som en øvelse i at holde den visuelle retning og brugerens oplevelse samlet - ud fra research og data. Hvordan kan vi sikre, at vores designvalg er i tråd med brugernes behov og forventninger? Vi brugte også denne mulighed for at eksperimentere med en målgruppe, som skilte sig lidt ud i forhold til, hvad vi havde arbejdet med indtil da.",
     theme: "customer",
     previewUrl: "https://kubraf96.github.io/customer-experience-exam-trial/",
     previewKind: "browser",
@@ -317,17 +358,27 @@ export const projects = [
       "Et tidligt designudkast til en webshop udviklet som rådgivning for en kunde.",
     services: "Rådgivning, wireframes, prototype",
     description:
-      "Jeg hjalp med et udkast til Sundhedsshoppen i form af en tidlig prototype. Projektet viser idéfasen og mine overvejelser om struktur og præsentation; det er ikke en færdigudviklet hjemmeside.",
+      "Jeg hjalp med et udkast til Sundhedsshoppen i form af en tidlig prototype (mockup), hvor jeg havde fokus på at forsimple en proces for en målgruppe, der har brug for en nem brugerrejse og hurtig adgang til information.",
     story: [
       {
         heading: "Om projektet",
         paragraphs: [
-          "Jeg rådgav en ven om en enkel, tidlig mockup til hans kunde Sundhedsshoppen.",
+          "Jeg rådgav en ven om en enkel, tidlig mockup til min vens kunde 'Sundhedsshoppen'. For denne målgruppe er det vigtigt at have en klar og overskuelig brugerrejse, der gør det nemt for dem at finde de oplysninger, de har brug for - men på samme tid også føle en personlig forbindelse til ejeren af webshoppen.",
+        ],
+      },
+      {
+        heading: "Opgaven",
+        paragraphs: [
+          "For ejeren af denne webshop er der særligt fokus på den personlige rådgivning og skræddersyet service, hun tilbyder. På samme tid, skal processen forsimples for ejeren af webshoppen, så hver enkelte bruger ikke skal kontakte hende privat.",
+          "Dette var mit første udkast og bud på, hvordan man kunne imødekomme ejeren af webshoppens ønske om personlig vejledning af hver enkelte bruger uden at overbelaste hende med forespørgsler.",
         ],
       },
     ],
     reflection:
       "Det var en øvelse i at bruge en enkel skitse som samtalegrundlag. Projektet er stadig et tidligt udkast, og jeg vil gerne vise det som netop dét frem for at præsentere det som en færdig webshop.",
+    cover: sundhedsshoppenCover,
+    coverAlt: "Skærmbillede af Sundhedsshoppen-prototypen",
+    coverPosition: "center center",
     theme: "sundhed",
     links: [
       {

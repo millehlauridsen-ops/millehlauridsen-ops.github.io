@@ -146,6 +146,17 @@ export default function ProjectPage() {
 
   const nextProject = projects[index + 1];
 
+  const figmaPrototype =
+    project.slug === "sundhedsshoppen"
+      ? project.links?.find((link) => link.label === "Se Figma-prototypen")
+      : null;
+
+  const figmaEmbedUrl = figmaPrototype
+    ? `https://www.figma.com/embed?embed_host=share&url=${encodeURIComponent(
+        figmaPrototype.url,
+      )}`
+    : null;
+
   return (
     <article className={styles.page}>
       <header className={styles.hero}>
@@ -164,11 +175,21 @@ export default function ProjectPage() {
         className={`${styles.cover} ${project.cover ? styles.coverFull : ""}`}
       >
         {project.cover ? (
-          <img
-            className={styles.coverImage}
-            src={project.cover}
-            alt={project.coverAlt || project.title}
-          />
+          <div className={styles.coverMedia}>
+            <img
+              className={styles.coverImage}
+              src={project.cover}
+              alt={project.coverAlt || project.title}
+              style={{
+                objectPosition: project.coverPosition || "center",
+              }}
+            />
+
+            <div className={styles.coverOverlay}>
+              <span>{project.category}</span>
+              <strong>{project.title}</strong>
+            </div>
+          </div>
         ) : (
           <div
             className={`${styles.coverGraphic} ${styles[project.theme] || ""}`}
@@ -262,12 +283,20 @@ export default function ProjectPage() {
       )}
 
       {project.previewUrl && (
-        <section className={styles.live}>
+        <section
+          className={`${styles.live} ${
+            project.previewKind === "phone" ? styles.phoneLive : ""
+          }`}
+        >
           <div className={styles.liveHeading}>
             <span>Projektet i brug</span>
+
+            {project.previewKind === "phone" && <h2>Prøv {project.title}</h2>}
+
             <p>
-              En visning af den eksisterende hjemmeside. Brug linket ovenfor,
-              hvis forhåndsvisningen ikke vises.
+              {project.previewKind === "phone"
+                ? "Klik dig rundt i appen direkte fra portfolioen. Du kan også åbne projektet via linket ovenfor."
+                : "En visning af den eksisterende hjemmeside. Brug linket ovenfor, hvis forhåndsvisningen ikke vises."}
             </p>
           </div>
 
@@ -331,6 +360,43 @@ export default function ProjectPage() {
               </figure>
             </Reveal>
           ))}
+        </section>
+      )}
+      {figmaEmbedUrl && (
+        <section
+          className={styles.figmaPreview}
+          aria-labelledby="figma-preview-heading"
+        >
+          <div className={styles.figmaPreviewHeading}>
+            <div>
+              <span>Interaktiv prototype</span>
+
+              <h2 id="figma-preview-heading">Udforsk Sundhedsshoppen</h2>
+            </div>
+
+            <p>
+              Klik dig rundt i den tidlige Figma-prototype og oplev projektets
+              struktur og visuelle retning.
+            </p>
+          </div>
+
+          <div className={styles.figmaDesktopPreview}>
+            <iframe
+              src={figmaEmbedUrl}
+              title="Figma-prototype af Sundhedsshoppen"
+              loading="lazy"
+              allowFullScreen
+            />
+          </div>
+
+          <a
+            className={styles.figmaResponsiveLink}
+            href={figmaPrototype.url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Åbn Figma-prototypen <span aria-hidden="true">↗</span>
+          </a>
         </section>
       )}
 

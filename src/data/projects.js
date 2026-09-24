@@ -281,8 +281,7 @@ export const projects = [
     coverAlt: "Skærmbillede af Lumina One-hjemmesiden",
     coverPosition: "center center",
     theme: "lumina",
-    previewUrl: "https://millehlauridsen-ops.github.io/LuminaOneExam/",
-    previewKind: "browser",
+
     links: [
       {
         label: "Se hjemmesiden",

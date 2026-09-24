@@ -60,7 +60,7 @@ export default function AboutPage() {
 
             <div>
               <span>Arbejder med</span>
-              <strong>Figma · React · VS Code</strong>
+              <strong>Figma · React · VS Code · AI</strong>
             </div>
 
             <div>

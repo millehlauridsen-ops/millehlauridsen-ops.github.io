@@ -438,7 +438,7 @@
 .carouselPair {
   min-width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 30% 70%;
 }
 
 .carouselPair img {

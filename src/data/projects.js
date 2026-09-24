@@ -26,12 +26,12 @@ export const projects = [
     services: "Koncept, illustration, emballagedesign",
     tools: "Illustrator · Photoshop",
     description:
-      "Et studieprojekt fra Creative Content, hvor jeg udviklede etiketter til tre fiktive øl i Anarkists univers. Jeg arbejdede med illustration, farve og komposition for at give Free Spirit, Smoked Rebel og Dark Manifest hver deres karakter.",
+      "Et studieprojekt fra Creative Craft, hvor jeg udviklede etiketter til tre fiktive øl i Anarkists univers. Jeg arbejdede med illustration, farve og komposition for at give Free Spirit, Smoked Rebel og Dark Manifest hver deres karakter.",
     story: [
       {
         heading: "Om projektet",
         paragraphs: [
-          "Et designprojekt fra Creative Content, hvor jeg arbejdede med øletiketter til det danske brand Anarkist.",
+          "Et designprojekt fra Creative Craft, hvor jeg arbejdede med øletiketter til det danske brand Anarkist.",
           "Jeg fokuserede på at indfange essensen af brandet og dets produkter og samtidig skabe en sammenhængende visuel identitet. Det var lidt udfordrende, fordi Anarkist har en meget særlig og markant stil, men jeg nød at eksperimentere med en anden stil end den, jeg er vant til.",
           "Jeg brugte AI som hjælp til at finde frem til, hvilke øltyper jeg ville designe etiketter til.",
         ],

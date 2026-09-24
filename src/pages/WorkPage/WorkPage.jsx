@@ -8,7 +8,6 @@ export default function WorkPage() {
   return (
     <div>
       <ProjectHero
-        eyebrow="Mit arbejde"
         title="Projekter."
         text="Grafisk design, motion og digitale løsninger. Vælg et projekt for at se idéen og resultatet."
       />
@@ -27,9 +26,13 @@ export default function WorkPage() {
                   className={`${styles.circle} ${styles[`circle${(index % 4) + 1}`]}`}
                   aria-hidden="true"
                 />
-                <span className={styles.number}>{project.number} / {project.category}</span>
+                <span className={styles.number}>
+                  {project.number} / {project.category}
+                </span>
                 <h2>{project.title}</h2>
-                <span className={styles.arrow} aria-hidden="true">↗</span>
+                <span className={styles.arrow} aria-hidden="true">
+                  ↗
+                </span>
               </Link>
             </Reveal>
           ))}

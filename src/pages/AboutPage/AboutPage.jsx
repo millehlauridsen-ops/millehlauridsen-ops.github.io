@@ -8,6 +8,8 @@ import grassVideo from "../../assets/images/graes.mov";
 import lampImage from "../../assets/images/phlampe.png";
 import crochetImage from "../../assets/images/haeklet.JPG";
 
+const interviewVideo = `${import.meta.env.BASE_URL}video/myinterview.mp4`;
+
 function ImagePlaceholder({ number, label, className = "" }) {
   return (
     <div
@@ -198,11 +200,14 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className={styles.videoPlaceholder}>
-            <span className={styles.play} aria-hidden="true">
-              ▶
-            </span>
-            <p>Din præsentationsvideo her</p>
+          <div className={styles.videoWrapper}>
+            <video
+              className={styles.interviewVideo}
+              src={interviewVideo}
+              controls
+              playsInline
+              preload="metadata"
+            />
           </div>
         </section>
       </Reveal>

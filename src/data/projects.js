@@ -13,6 +13,7 @@ import hot from "../assets/projects/EmilKruse_hot.mp4";
 import luminaCover from "../assets/projects/luminaScreenshot.png";
 import sundhedsshoppenCover from "../assets/projects/sundhedsshoppenScreenshot.png";
 import pubhubCover from "../assets/projects/pubhubposter.png";
+import controlCover from "../assets/projects/controlScreenshot.png";
 
 export const projects = [
   {
@@ -305,7 +306,7 @@ export const projects = [
     title: "Customer Experience",
     category: "Webdesign · Brugeroplevelse",
     intro:
-      "Et digitalt koncept med fokus på målgruppe, visuel identitet og brugerrejse.",
+      "Et digitalt koncept (retailer) med fokus på målgruppe, visuel identitet og brugerrejse.",
     services: "Brugerrejse, visuel identitet, prototype",
     description:
       "I dette projekt arbejdede vi med sammenhængen mellem målgruppe, visuel identitet og den oplevelse, brugeren møder på hjemmesiden. Se løsningen og prototypen via linkene.",
@@ -332,6 +333,9 @@ export const projects = [
     ],
     reflection:
       "Jeg ser projektet som en øvelse i at holde den visuelle retning og brugerens oplevelse samlet - ud fra research og data. Hvordan kan vi sikre, at vores designvalg er i tråd med brugernes behov og forventninger? Vi brugte også denne mulighed for at eksperimentere med en målgruppe, som skilte sig lidt ud i forhold til, hvad vi havde arbejdet med indtil da.",
+    cover: controlCover,
+    coverAlt: "Skærmbillede af control-hjemmeside",
+    coverPosition: "center center",
     theme: "customer",
     previewUrl: "https://kubraf96.github.io/customer-experience-exam-trial/",
     previewKind: "browser",
@@ -376,7 +380,7 @@ export const projects = [
       },
     ],
     reflection:
-      "Det var en øvelse i at bruge en enkel skitse som samtalegrundlag. Projektet er stadig et tidligt udkast, og jeg vil gerne vise det som netop dét frem for at præsentere det som en færdig webshop.",
+      "Projektet er et lo-fi udkast, der fokuserer på at skabe en enkel og overskuelig brugerrejse. Det var interessant at arbejde på en konkret webshop og skabe en løsning, der imødekommer brugerens behov uden at gå på kompromis med ejeren af webshoppens værdigrundlag.",
     cover: sundhedsshoppenCover,
     coverAlt: "Skærmbillede af Sundhedsshoppen-prototypen",
     coverPosition: "center center",

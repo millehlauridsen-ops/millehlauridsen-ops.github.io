@@ -282,13 +282,13 @@ export const projects = [
     coverAlt: "Skærmbillede af Lumina One-hjemmesiden",
     coverPosition: "center center",
     theme: "lumina",
-    previewUrl: "https://millehlauridsen-ops.github.io/LuminaOneExam/",
+    previewUrl: "https://millehlauridsen-ops.github.io/luminaResponsive/",
     previewKind: "browser",
 
     links: [
       {
         label: "Se hjemmesiden",
-        url: "https://millehlauridsen-ops.github.io/LuminaOneExam/",
+        url: "https://millehlauridsen-ops.github.io/luminaResponsive/",
       },
       {
         label: "Se Figma-prototypen",
@@ -296,7 +296,7 @@ export const projects = [
       },
       {
         label: "Se GitHub-koden",
-        url: "https://github.com/millehlauridsen-ops/LuminaOneExam",
+        url: "https://github.com/millehlauridsen-ops/luminaResponsive",
       },
     ],
   },

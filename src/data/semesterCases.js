@@ -307,27 +307,41 @@ export const semesterCases = [
           layout: "carousel",
           items: [
             picture(
-              "Indgangen til konceptet",
-              "Hvordan brugeren møder Go Rogue.",
+              "Hangtags med QR-kode",
+              "Et koncept til at registrere tøjet på sin profil og gøre senere indsendelse nemmere.",
+              "cases/go-rogue/hangtags.png",
             ),
             picture(
-              "Sælg dit tøj",
-              "Et centralt trin i sælgerens brugerrejse.",
+              "Hjerteformet hangtag",
+              "Go Rogues logo på det hjerteformede hangtag.",
+              "cases/go-rogue/hearttag.svg",
             ),
-            picture("Køb brugt", "Et centralt trin i køberens brugerrejse."),
+            picture(
+              "Klistermærker",
+              "Logoer og grafiske elementer fra LA RŌUGE og Go Rogue.",
+              "cases/go-rogue/stickers.png",
+            ),
+            picture(
+              "Noten i pakken",
+              "En personlig hilsen med fokus på at forlænge tøjets levetid.",
+              "cases/go-rogue/note.png",
+            ),
           ],
         },
       },
       {
         heading: "Min rolle",
         paragraphs: [
-          "[Udfyld før aflevering: Beskriv dit konkrete bidrag til research, navn, logo, visuel retning, tekster eller prototype. Hvilke beslutninger traf I sammen?]",
+          "For mig var det vigtigt, at vi gav plads til at lege med idéen og prøve skøre og skæve retninger af. Jeg tog initiativ til, at vi bevægede os væk fra Re Rouge-idéen og undersøgte en mere modig og skæv brandpersona. Jeg ville gerne udfordre vores første retning og se, hvad konceptet kunne blive til, hvis vi tænkte lidt mere ud af boksen.",
+          "Dog er jeg også bevidst om, at skæve, skøre retninger kan være svære at forene med et eksisterende brand. Det kræver en delikat balancegang at bevare essensen af brandet, samtidig med at man udforsker nye kreative muligheder.",
+          "Derfor brugte vi LA ROUGEs eksisterende skelet og fundament som udgangspunkt og byggede videre på det med nye idéer og koncepter.",
         ],
       },
     ],
     reflection: [
-      "Go Rogue gav mig mulighed for at arbejde med et eksisterende brand og samtidig udfordre dets udtryk. Det krævede, at vi både forstod udgangspunktet og turde undersøge en anden retning.",
-      "Jeg tager især med mig, at en stærk identitet og en overskuelig brugerrejse skal understøtte hinanden. Vores koncept er et bud på, hvordan re-commerce kan få mere opmærksomhed, men det kræver afprøvning med målgruppen at vurdere, om løsningen også får flere til at sende deres tøj ind.",
+      "Da projektet var færdigt, pitchede vi det for Pernille, som repræsenterede LA ROUGE. Da vi så de andres løsninger, blev det tydeligt, at vi skilte os markant ud med vores udtryk. De fleste var gået med en stil, der lænede sig mere op af LA ROUGEs eksisterende identitet.",
+      "Jeg tager især med mig, at mine idéer faktisk er ret originale - selvom jeg nogengange tror, at de er ret generiske. Mit mål er altid at efterlade en form for indtryk, og det lykkedes. ",
+      "Det er en balancegang at finde det rette udtryk, der både er tro mod brandet og samtidig nytænkende. Vores koncept er et bud på, hvordan re-commerce kan få mere opmærksomhed, men det kræver afprøvning med målgruppen at vurdere, om løsningen har den ønskede virkning.",
     ],
   },
 ];

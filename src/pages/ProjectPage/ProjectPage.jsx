@@ -190,7 +190,6 @@ export default function ProjectPage() {
 
             <div className={styles.coverOverlay}>
               <span>{project.category}</span>
-              <strong>{project.title}</strong>
             </div>
           </div>
         ) : (
@@ -198,7 +197,6 @@ export default function ProjectPage() {
             className={`${styles.coverGraphic} ${styles[project.theme] || ""}`}
           >
             <span>{project.category}</span>
-            <strong>{project.title}</strong>
           </div>
         )}
       </div>

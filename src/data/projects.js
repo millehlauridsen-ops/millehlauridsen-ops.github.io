@@ -17,6 +17,7 @@ import pubhubCover from "../assets/projects/pubhubposter.png";
 import controlCover from "../assets/projects/controlScreenshot.png";
 
 export const projects = [
+  ...semesterCases,
   {
     slug: "anarkist-etiketter",
     number: "01",
@@ -393,5 +394,4 @@ export const projects = [
       },
     ],
   },
-  ...semesterCases,
 ];

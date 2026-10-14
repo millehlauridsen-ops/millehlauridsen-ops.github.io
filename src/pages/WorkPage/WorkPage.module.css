@@ -141,3 +141,52 @@
     font-size: 0.78rem;
   }
 }
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 28px;
+  margin-bottom: 36px;
+}
+
+.filterButton {
+  position: relative;
+  min-height: 44px;
+  padding: 10px 0;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition:
+    color 180ms ease,
+    border-color 180ms ease;
+}
+
+.filterButton:hover {
+  color: var(--cobalt);
+}
+
+.filterActive {
+  color: var(--cobalt);
+  border-bottom-color: var(--cobalt);
+}
+
+.filterButton:focus-visible {
+  outline: 2px solid var(--cobalt);
+  outline-offset: 5px;
+  border-radius: 2px;
+}
+
+@media (max-width: 600px) {
+  .filters {
+    gap: 8px 20px;
+    margin-bottom: 28px;
+  }
+
+  .filterButton {
+    font-size: 0.85rem;
+  }
+}

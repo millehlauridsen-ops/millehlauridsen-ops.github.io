@@ -210,38 +210,46 @@ export const semesterCases = [
     title: "Go Rogue",
     category: "Brandidentitet · Konceptudvikling · Re-commerce",
     intro:
-      "Et subbrand med sin egen stemme og et genkendeligt afsæt i LA RÅŒUGE.",
+      "Et subbrand med sin egen stemme og et genkendeligt afsæt i LA RŌUGE.",
     services: "Målgruppe, brandidentitet, digitalt koncept",
     tools: "Figma",
     collaboration: "Gruppeprojekt · 3. semester",
     description:
-      "Et re-commerce-koncept, hvor vi undersøgte balancen mellem moderbrandets identitet og et mere modigt visuelt udtryk.",
+      "LA RŌUGE vil gerne udvide sin re-commerce-indsats med et subbrand, der sælger deres tøj brugt.",
     isSemesterCase: true,
-    // Eksempel: cover: asset("cases/go-rogue/cover.webp"),
-    coverAlt: "Go Rogues visuelle identitet",
-    links: [],
+    cover: asset("cases/go-rogue/cover.png"),
+    coverAlt: "Forsiden af Go Rogue-prototypen",
+    links: [
+      {
+        label: "Se Figma-prototypen",
+        url: "https://www.figma.com/proto/xJ147c7hA2Vpd1IKHds3Sg/La-Rouge---Go-Rogue?node-id=177-2576&viewport=-576%2C96%2C0.44&t=lCVsL0hAYPjcn1C5-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=139%3A1495&page-id=139%3A1494",
+      },
+    ],
     story: [
       {
         heading: "Om projektet",
         paragraphs: [
-          "I dette gruppeprojekt arbejdede vi med at give LA RÅŒUGEs re-commerce-initiativ sin egen identitet og digitale oplevelse. Subbrandet skulle kunne stå på egne ben og samtidig bevare forbindelsen til moderbrandets fokus på kvalitet, tidløshed og selvkærlighed.",
+          "I dette gruppeprojekt arbejdede vi med at give LA ROUGEs re-commerce-initiativ sin egen identitet og digitale oplevelse. Subbrandet skulle kunne stå på egne ben og samtidig bevare forbindelsen til moderbrandets fokus på kvalitet, tidløshed og selvkærlighed.",
           "Udfordringen handlede ikke kun om at få det brugte tøj solgt. Der var også behov for at få flere kunder til at sende det tøj ind, de ikke længere brugte.",
+          "Vi skulle finde ud af, hvordan vi skulle definere målgruppen og kommunikere til dem uden at gå på kompromis med moderbrandets identitet.",
         ],
       },
       {
         heading: "Hvem skulle vi tale til?",
         paragraphs: [
-          "Vi undersøgte moderbrandets målgruppe og mulighederne for at nå en yngre gruppe gennem re-commerce. I den fælles konceptretning valgte vi primært at arbejde med kvinder i 30’erne.",
-          "Vores research var baseret på eksisterende viden og data. Vi gennemførte ikke brugerundersøgelser, så vi var opmærksomme på, at vores forståelse af målgruppen stadig indeholdt antagelser. En af dem var, at indsendelsen af tøjet kunne opleves som besværlig og uoverskuelig.",
-          "Det gjorde det relevant at tænke både kommunikation og brugerrejse ind i konceptet. En ny identitet skulle skabe opmærksomhed, men brugeren skulle også forstå, hvordan hun kunne deltage.",
+          "Vi undersøgte moderbrandets målgruppe og mulighederne for at nå en yngre gruppe gennem re-commerce. I den fælles konceptretning valgte vi primært at arbejde med kvinder i 30’erne, der finder styrke og fællesskab i det at være en selvstændig og moderne kvinde.",
+          "Vi gennemførte ikke vores egne brugerundersøgelser, så vi var opmærksomme på, at vores ideer om målgruppen indeholdt antagelser. En af dem var, at indsendelsen af tøjet kunne opleves som besværlig og uoverskuelig.",
+          "Vi satte derfor fokus på kommunikation og brugerrejse. En ny identitet skulle skabe opmærksomhed og resonere hos brugerne, og processen skulle på samme tid gøres mere simpel.",
+          "Vi lænede os ind i brandets historie om en mor-datter forbindelse for at skabe en følelsesmæssig forbindelse til brugerne - og for at kunne subbrandet plads til at have sit eget udtryk.",
         ],
       },
       {
         heading: "En ny retning med et genkendeligt afsæt",
         paragraphs: [
-          "Vi udviklede Go Rogue med inspiration fra LA RÅŒUGEs fortælling om selvkærlighed og retten til at være sig selv. Vi ville give den fortælling et mere direkte og modigt udtryk.",
-          "Undervejs undersøgte vi forskellige visuelle retninger. Én lå tættere på moderbrandets eksisterende univers, mens en anden havde mere kontrast og kant. Vi valgte at arbejde videre med den mere markante retning for at give re-commerce-konceptet sin egen plads.",
-          "Det var interessant at eksperimentere med, hvor langt vi kunne skubbe udtrykket og stadig bevare forbindelsen til LA RÅŒUGE.",
+          "Vi udviklede Go Rogue med inspiration fra LA ROUGEs fortælling om selvkærlighed og retten til at være sig selv og tage plads. Men vi ville give den fortælling et mere direkte og modigt udtryk, der læner sig op ad, hvad det vil sige at være en 'feminist' for den unge, moderne kvinde.",
+          "Undervejs undersøgte vi forskellige visuelle retninger. Én lå tættere på moderbrandets eksisterende univers med rolige, dæmpede farver og klassisk stil, mens en anden havde mere kontrast og kant. Vi arbejdede videre med den mere markante retning, da den stil læner sig mere i en ungdommelig og dristig retning - som vi vurderede ville resonere med den yngre målgruppe.",
+          "Det var interessant at eksperimentere med, hvor langt vi kunne skubbe udtrykket og stadig bevare forbindelsen til LA RŌUGE.",
+          "Vi tog udgangspunkt i skelettet fra LA RŌUGE for at have et originalt og klassisk touch at læne sig op af - og det gav os mere plads til at eksperimentere med det visuelle udtryk i de små detaljer.",
         ],
         media: {
           layout: "comparison",

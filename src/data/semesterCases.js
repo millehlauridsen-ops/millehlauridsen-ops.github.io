@@ -1,5 +1,5 @@
 // Placering: src/data/semesterCases.js
-// Billedstier er relative til public/. SÃ¦t src til et filnavn, nÃ¥r du har billedet.
+// Billedstier er relative til public/. Sæt src til et filnavn, når du har billedet.
 const asset = (path) => `${import.meta.env.BASE_URL}${path}`;
 const picture = (title, caption, file = null) => ({
   title,
@@ -14,14 +14,14 @@ export const semesterCases = [
     number: "08",
     year: "2026",
     title: "Mellemrum",
-    category: "React Â· Supabase Â· Produktoptimering",
+    category: "React · Supabase · Produktoptimering",
     intro:
-      "Fra en eksisterende prototype til et sammenhÃ¦ngende tilmeldingsflow.",
+      "Fra en eksisterende prototype til et sammenhængende tilmeldingsflow.",
     services: "Frontend, datamodel, tilmeldingsflow",
-    tools: "React Â· Supabase REST API Â· GitHub",
-    collaboration: "Individuelt projekt Â· 3. semester",
+    tools: "React · Supabase REST API · GitHub",
+    collaboration: "Individuelt projekt · 3. semester",
     description:
-      "En kultur- og eventplatform, hvor jeg arbejdede med sammenhÃ¦ngen mellem kode, database og brugeroplevelse.",
+      "En kultur- og eventplatform, hvor jeg arbejdede med sammenhængen mellem kode, database og brugeroplevelse.",
     isSemesterCase: true,
     // Eksempel: cover: asset("cases/mellemrum/forside.webp"),
     coverAlt: "Eventoversigten i Mellemrum",
@@ -39,15 +39,15 @@ export const semesterCases = [
       {
         heading: "Om projektet",
         paragraphs: [
-          "Mellemrum var et individuelt projekt pÃ¥ 3. semester, hvor jeg overtog en eksisterende React-prototype. Platformen skulle gÃ¸re det nemt at finde og tilmelde sig kulturoplevelser i Aarhus, men flere dele af lÃ¸sningen var kun pÃ¥begyndt.",
-          "Min opgave var at videreudvikle prototypen og arbejde med sammenhÃ¦ngen mellem kode, database og brugeroplevelse. Jeg havde sÃ¦rligt fokus pÃ¥, hvordan en tilmelding kunne gemmes korrekt og efterfÃ¸lgende vises i arrangÃ¸rens overblik.",
+          "Mellemrum var et individuelt projekt på 3. semester, hvor jeg overtog en eksisterende React-prototype. Platformen skulle gøre det nemt at finde og tilmelde sig kulturoplevelser i Aarhus, men flere dele af løsningen var kun påbegyndt.",
+          "Min opgave var at videreudvikle prototypen og arbejde med sammenhængen mellem kode, database og brugeroplevelse. Jeg havde særligt fokus på, hvordan en tilmelding kunne gemmes korrekt og efterfølgende vises i arrangørens overblik.",
         ],
         media: {
           layout: "single",
           items: [
             picture(
               "Eventoversigten",
-              "Et samlet overblik over kommende events med sÃ¸gning og kategorier.",
+              "Et samlet overblik over kommende events med søgning og kategorier.",
             ),
           ],
         },
@@ -55,8 +55,8 @@ export const semesterCases = [
       {
         heading: "Fra tilmelding til overblik",
         paragraphs: [
-          "Jeg arbejdede med at forbinde events, lokationer og tilmeldinger gennem relationer i Supabase. En tilmelding blev knyttet til det valgte events id frem for at gemme eventets titel som en separat oplysning. Det gjorde relationen tydeligere og betÃ¸d, at titlen kunne Ã¦ndres uden at skulle opdateres i hver tilmelding.",
-          "PÃ¥ den interne side samlede jeg tilmeldingerne i et overblik, hvor de nyeste vises fÃ¸rst. Her kan arrangÃ¸ren filtrere efter event og bekrÃ¦fte eller slette en tilmelding. For mig var det vigtigt, at oplysningerne ikke bare blev gemt i databasen, men ogsÃ¥ kunne bruges i den anden ende af lÃ¸sningen.",
+          "Jeg arbejdede med at forbinde events, lokationer og tilmeldinger gennem relationer i Supabase. En tilmelding blev knyttet til det valgte events id frem for at gemme eventets titel som en separat oplysning. Det gjorde relationen tydeligere og betød, at titlen kunne ændres uden at skulle opdateres i hver tilmelding.",
+          "På den interne side samlede jeg tilmeldingerne i et overblik, hvor de nyeste vises først. Her kan arrangøren filtrere efter event og bekræfte eller slette en tilmelding. For mig var det vigtigt, at oplysningerne ikke bare blev gemt i databasen, men også kunne bruges i den anden ende af løsningen.",
         ],
         media: {
           layout: "comparison",
@@ -66,17 +66,17 @@ export const semesterCases = [
               "Brugerens side af tilmeldingsflowet.",
             ),
             picture(
-              "ArrangÃ¸rens overblik",
-              "Tilmeldinger vises sammen med det event, de hÃ¸rer til.",
+              "Arrangørens overblik",
+              "Tilmeldinger vises sammen med det event, de hører til.",
             ),
           ],
         },
       },
       {
-        heading: "NÃ¥r data ikke kommer som forventet",
+        heading: "Når data ikke kommer som forventet",
         paragraphs: [
-          "Jeg arbejdede ogsÃ¥ med de situationer, hvor siden venter pÃ¥ data, en sÃ¸gning ikke giver resultater, eller et API-kald fejler. Brugeren skal kunne forstÃ¥, hvad der sker, i stedet for at mÃ¸de en tom side.",
-          "Kommunikationen med Supabase blev samlet i en service-fil, sÃ¥ databasekald kunne genbruges pÃ¥ tvÃ¦rs af siderne. Derudover arbejdede jeg med fokus pÃ¥ sidens overskrift ved navigation og visning af resterende pladser pÃ¥ det enkelte event.",
+          "Jeg arbejdede også med de situationer, hvor siden venter på data, en søgning ikke giver resultater, eller et API-kald fejler. Brugeren skal kunne forstå, hvad der sker, i stedet for at møde en tom side.",
+          "Kommunikationen med Supabase blev samlet i en service-fil, så databasekald kunne genbruges på tværs af siderne. Derudover arbejdede jeg med fokus på sidens overskrift ved navigation og visning af resterende pladser på det enkelte event.",
         ],
         media: {
           layout: "carousel",
@@ -84,11 +84,11 @@ export const semesterCases = [
             picture("Loading", "Feedback mens events hentes."),
             picture(
               "Ingen resultater",
-              "Et relevant nÃ¦ste skridt, nÃ¥r sÃ¸gningen ikke giver resultater.",
+              "Et relevant næste skridt, når søgningen ikke giver resultater.",
             ),
             picture(
               "Fejlbesked",
-              "En forstÃ¥elig besked, hvis data ikke kan hentes.",
+              "En forståelig besked, hvis data ikke kan hentes.",
             ),
           ],
         },
@@ -96,19 +96,19 @@ export const semesterCases = [
       {
         heading: "Min rolle",
         paragraphs: [
-          "Jeg stod selv for videreudviklingen af den udleverede prototype. Mit arbejde omfattede React, relationer i Supabase, tilmeldingsformularen og det interne overblik. Det gav mig mulighed for at arbejde med bÃ¥de det, brugeren mÃ¸der, og den struktur, der fÃ¥r lÃ¸sningen til at hÃ¦nge sammen.",
+          "Jeg stod selv for videreudviklingen af den udleverede prototype. Mit arbejde omfattede React, relationer i Supabase, tilmeldingsformularen og det interne overblik. Det gav mig mulighed for at arbejde med både det, brugeren møder, og den struktur, der får løsningen til at hænge sammen.",
         ],
       },
       {
-        heading: "Kontrol af lÃ¸sningen",
+        heading: "Kontrol af løsningen",
         paragraphs: [
-          "[Udfyld fÃ¸r aflevering: Beskriv Ã©n konkret kontrol af din lÃ¸sning. Hvad afprÃ¸vede du, hvad forventede du, og hvad viste resultatet? Brug fx en tilmelding, som blev gemt og vist pÃ¥ den deployede version.]",
+          "[Udfyld før aflevering: Beskriv én konkret kontrol af din løsning. Hvad afprøvede du, hvad forventede du, og hvad viste resultatet? Brug fx en tilmelding, som blev gemt og vist på den deployede version.]",
         ],
       },
     ],
     reflection: [
-      "I dette projekt oplevede jeg igen tilfredsstillelsen i at forbedre en eksisterende lÃ¸sning. En Ã¦ndring i databasen kan virke lille, men den fÃ¥r betydning flere steder i produktet.",
-      "Jeg fik en bedre forstÃ¥else for, hvordan frontend og data hÃ¦nger sammen, og hvor vigtigt det er at tÃ¦nke hele flowet igennem. Det er ikke nok, at en formular ser fÃ¦rdig ud â€” oplysningerne skal gemmes korrekt, forbindes med det rigtige event og kunne vises igen.",
+      "I dette projekt oplevede jeg igen tilfredsstillelsen i at forbedre en eksisterende løsning. En ændring i databasen kan virke lille, men den får betydning flere steder i produktet.",
+      "Jeg fik en bedre forståelse for, hvordan frontend og data hænger sammen, og hvor vigtigt det er at tænke hele flowet igennem. Det er ikke nok, at en formular ser færdig ud — oplysningerne skal gemmes korrekt, forbindes med det rigtige event og kunne vises igen.",
     ],
   },
   {
@@ -116,33 +116,33 @@ export const semesterCases = [
     number: "09",
     year: "2026",
     title: "Vuuh",
-    category: "UX/UI Â· Onboarding Â· Produktoptimering",
+    category: "UX/UI · Onboarding · Produktoptimering",
     intro:
-      "En mere overskuelig vej fra opsÃ¦tning til oplevelsen af produktets vÃ¦rdi.",
+      "En mere overskuelig vej fra opsætning til oplevelsen af produktets værdi.",
     services: "UX-analyse, interaktionsdesign, prototype",
     tools: "Figma",
-    collaboration: "Gruppeprojekt Â· 3. semester",
+    collaboration: "Gruppeprojekt · 3. semester",
     description:
-      "Et redesign af en eksisterende onboarding med fokus pÃ¥ tydelige handlinger, mindre kompleksitet og forstÃ¥elig feedback.",
+      "Et redesign af en eksisterende onboarding med fokus på tydelige handlinger, mindre kompleksitet og forståelig feedback.",
     isSemesterCase: true,
     // Eksempel: cover: asset("cases/vuuh/cover.webp"),
     coverAlt: "Den redesignede onboarding i Vuuh",
-    // TilfÃ¸j dine egne links: { label: "Se Figma-prototypen", url: "https://..." }
+    // Tilføj dine egne links: { label: "Se Figma-prototypen", url: "https://..." }
     links: [],
     story: [
       {
         heading: "Om projektet",
         paragraphs: [
-          "Vuuh var et gruppeprojekt pÃ¥ 3. semester, hvor vi arbejdede med onboarding i en eksisterende fashion tech-lÃ¸sning. Produktet hjÃ¦lper webshopejere med at hente produktdata fra brands, men opsÃ¦tningen skulle vÃ¦re lettere at forstÃ¥, fÃ¸r brugeren kunne fÃ¥ glÃ¦de af lÃ¸sningen.",
-          "Vi ville undersÃ¸ge, hvor processen blev unÃ¸dvendigt kompliceret, og hvordan vi kunne forbedre den inden for rammerne af det eksisterende produkt.",
+          "Vuuh var et gruppeprojekt på 3. semester, hvor vi arbejdede med onboarding i en eksisterende fashion tech-løsning. Produktet hjælper webshopejere med at hente produktdata fra brands, men opsætningen skulle være lettere at forstå, før brugeren kunne få glæde af løsningen.",
+          "Vi ville undersøge, hvor processen blev unødvendigt kompliceret, og hvordan vi kunne forbedre den inden for rammerne af det eksisterende produkt.",
         ],
       },
       {
         heading: "Hvor bliver brugeren i tvivl?",
         paragraphs: [
-          "Vi tog udgangspunkt i den eksisterende onboarding og undersÃ¸gte de steder, hvor brugeren kunne miste overblikket: Hvad skal jeg gÃ¸re nu? Hvad betyder det her? Og hvordan ved jeg, om det er lykkedes?",
-          "[Udfyld fÃ¸r aflevering: Beskriv Ã©t konkret fund fra jeres UX-audit, hvor det opstod, og hvorfor det var vigtigt at prioritere.]",
-          "Det fund blev et af vores afsÃ¦t for redesignet. Jeg synes, det var interessant at arbejde med en lÃ¸sning, der allerede eksisterede, fordi vi skulle kunne begrunde vores Ã¦ndringer ud fra de problemer, vi fandt.",
+          "Vi tog udgangspunkt i den eksisterende onboarding og undersøgte de steder, hvor brugeren kunne miste overblikket: Hvad skal jeg gøre nu? Hvad betyder det her? Og hvordan ved jeg, om det er lykkedes?",
+          "[Udfyld før aflevering: Beskriv ét konkret fund fra jeres UX-audit, hvor det opstod, og hvorfor det var vigtigt at prioritere.]",
+          "Det fund blev et af vores afsæt for redesignet. Jeg synes, det var interessant at arbejde med en løsning, der allerede eksisterede, fordi vi skulle kunne begrunde vores ændringer ud fra de problemer, vi fandt.",
         ],
         media: {
           layout: "comparison",
@@ -153,7 +153,7 @@ export const semesterCases = [
             ),
             picture(
               "Et udvalgt Finding Card",
-              "Fundet og den evidens, der lÃ¥ bag vores prioritering.",
+              "Fundet og den evidens, der lå bag vores prioritering.",
             ),
           ],
         },
@@ -161,14 +161,14 @@ export const semesterCases = [
       {
         heading: "Mindre kompleksitet, tydeligere retning",
         paragraphs: [
-          "Vi arbejdede med at forsimple indholdet, prioritere informationen og gÃ¸re handlingerne tydeligere. MÃ¥let var, at brugeren lettere kunne forstÃ¥ nÃ¦ste skridt og komme videre pÃ¥ egen hÃ¥nd.",
-          "Motion design blev brugt til at understÃ¸tte forstÃ¥elsen af processen. BevÃ¦gelsen skulle have et formÃ¥l og hjÃ¦lpe med at vise, hvad der skete, nÃ¥r brugeren handlede.",
-          "[Udfyld fÃ¸r aflevering: Beskriv Ã¦ndringen, der adresserede fundet ovenfor, og hvordan den blev vist i prototypen.]",
+          "Vi arbejdede med at forsimple indholdet, prioritere informationen og gøre handlingerne tydeligere. Målet var, at brugeren lettere kunne forstå næste skridt og komme videre på egen hånd.",
+          "Motion design blev brugt til at understøtte forståelsen af processen. Bevægelsen skulle have et formål og hjælpe med at vise, hvad der skete, når brugeren handlede.",
+          "[Udfyld før aflevering: Beskriv ændringen, der adresserede fundet ovenfor, og hvordan den blev vist i prototypen.]",
         ],
         media: {
           layout: "comparison",
           items: [
-            picture("FÃ¸r redesign", "Det oprindelige trin."),
+            picture("Før redesign", "Det oprindelige trin."),
             picture(
               "Efter redesign",
               "Samme trin med jeres konkrete forbedring.",
@@ -179,28 +179,28 @@ export const semesterCases = [
       {
         heading: "Den samlede oplevelse",
         paragraphs: [
-          "Den interaktive prototype samlede vores Ã¦ndringer i et flow. Her kunne vi arbejde med sammenhÃ¦ngen mellem brugerens handlinger og den feedback, lÃ¸sningen giver.",
-          "[Udfyld fÃ¸r aflevering: Hvis I gennemfÃ¸rte et Accessibility Design Check, beskriv Ã©n barriere, jeres Ã¦ndring og hvordan I vurderede den igen.]",
+          "Den interaktive prototype samlede vores ændringer i et flow. Her kunne vi arbejde med sammenhængen mellem brugerens handlinger og den feedback, løsningen giver.",
+          "[Udfyld før aflevering: Hvis I gennemførte et Accessibility Design Check, beskriv én barriere, jeres ændring og hvordan I vurderede den igen.]",
         ],
         media: {
           layout: "carousel",
           items: [
-            picture("FÃ¸rste trin", "IndsÃ¦t fÃ¸rste skÃ¦rm fra det nye flow."),
-            picture("NÃ¦ste handling", "Vis hvordan brugeren kommer videre."),
-            picture("Feedback", "Vis systemets reaktion pÃ¥ handlingen."),
+            picture("Første trin", "Indsæt første skærm fra det nye flow."),
+            picture("Næste handling", "Vis hvordan brugeren kommer videre."),
+            picture("Feedback", "Vis systemets reaktion på handlingen."),
           ],
         },
       },
       {
         heading: "Min rolle",
         paragraphs: [
-          "[Udfyld fÃ¸r aflevering: Hvilke fund, skÃ¦rme, interaktioner eller animationer arbejdede du selv med? Hvad udviklede I sammen?]",
+          "[Udfyld før aflevering: Hvilke fund, skærme, interaktioner eller animationer arbejdede du selv med? Hvad udviklede I sammen?]",
         ],
       },
     ],
     reflection: [
-      "Vuuh gav mig mulighed for at arbejde mere detaljeret med interaktioner i et eksisterende produkt. SmÃ¥ Ã¦ndringer i tekst, placering og feedback kan have stor betydning for, hvor overskuelig en proces fÃ¸les.",
-      "For mig var det lÃ¦rerigt at holde fast i problemet bag designvalget. En lÃ¸sning kan godt se mere enkel ud, uden at den nÃ¸dvendigvis er lettere at forstÃ¥. Et nÃ¦ste skridt ville vÃ¦re at afprÃ¸ve prototypen med relevante brugere og undersÃ¸ge, om de faktisk kan gennemfÃ¸re onboardingen mere selvstÃ¦ndigt.",
+      "Vuuh gav mig mulighed for at arbejde mere detaljeret med interaktioner i et eksisterende produkt. Små ændringer i tekst, placering og feedback kan have stor betydning for, hvor overskuelig en proces føles.",
+      "For mig var det lærerigt at holde fast i problemet bag designvalget. En løsning kan godt se mere enkel ud, uden at den nødvendigvis er lettere at forstå. Et næste skridt ville være at afprøve prototypen med relevante brugere og undersøge, om de faktisk kan gennemføre onboardingen mere selvstændigt.",
     ],
   },
   {
@@ -208,14 +208,14 @@ export const semesterCases = [
     number: "10",
     year: "2026",
     title: "Go Rogue",
-    category: "Brandidentitet Â· Konceptudvikling Â· Re-commerce",
+    category: "Brandidentitet · Konceptudvikling · Re-commerce",
     intro:
-      "Et subbrand med sin egen stemme og et genkendeligt afsÃ¦t i LA RÅŒUGE.",
-    services: "MÃ¥lgruppe, brandidentitet, digitalt koncept",
+      "Et subbrand med sin egen stemme og et genkendeligt afsæt i LA RÅŒUGE.",
+    services: "Målgruppe, brandidentitet, digitalt koncept",
     tools: "Figma",
-    collaboration: "Gruppeprojekt Â· 3. semester",
+    collaboration: "Gruppeprojekt · 3. semester",
     description:
-      "Et re-commerce-koncept, hvor vi undersÃ¸gte balancen mellem moderbrandets identitet og et mere modigt visuelt udtryk.",
+      "Et re-commerce-koncept, hvor vi undersøgte balancen mellem moderbrandets identitet og et mere modigt visuelt udtryk.",
     isSemesterCase: true,
     // Eksempel: cover: asset("cases/go-rogue/cover.webp"),
     coverAlt: "Go Rogues visuelle identitet",
@@ -224,31 +224,31 @@ export const semesterCases = [
       {
         heading: "Om projektet",
         paragraphs: [
-          "I dette gruppeprojekt arbejdede vi med at give LA RÅŒUGEs re-commerce-initiativ sin egen identitet og digitale oplevelse. Subbrandet skulle kunne stÃ¥ pÃ¥ egne ben og samtidig bevare forbindelsen til moderbrandets fokus pÃ¥ kvalitet, tidlÃ¸shed og selvkÃ¦rlighed.",
-          "Udfordringen handlede ikke kun om at fÃ¥ det brugte tÃ¸j solgt. Der var ogsÃ¥ behov for at fÃ¥ flere kunder til at sende det tÃ¸j ind, de ikke lÃ¦ngere brugte.",
+          "I dette gruppeprojekt arbejdede vi med at give LA RÅŒUGEs re-commerce-initiativ sin egen identitet og digitale oplevelse. Subbrandet skulle kunne stå på egne ben og samtidig bevare forbindelsen til moderbrandets fokus på kvalitet, tidløshed og selvkærlighed.",
+          "Udfordringen handlede ikke kun om at få det brugte tøj solgt. Der var også behov for at få flere kunder til at sende det tøj ind, de ikke længere brugte.",
         ],
       },
       {
         heading: "Hvem skulle vi tale til?",
         paragraphs: [
-          "Vi undersÃ¸gte moderbrandets mÃ¥lgruppe og mulighederne for at nÃ¥ en yngre gruppe gennem re-commerce. I den fÃ¦lles konceptretning valgte vi primÃ¦rt at arbejde med kvinder i 30â€™erne.",
-          "Vores research var baseret pÃ¥ eksisterende viden og data. Vi gennemfÃ¸rte ikke brugerundersÃ¸gelser, sÃ¥ vi var opmÃ¦rksomme pÃ¥, at vores forstÃ¥else af mÃ¥lgruppen stadig indeholdt antagelser. En af dem var, at indsendelsen af tÃ¸jet kunne opleves som besvÃ¦rlig og uoverskuelig.",
-          "Det gjorde det relevant at tÃ¦nke bÃ¥de kommunikation og brugerrejse ind i konceptet. En ny identitet skulle skabe opmÃ¦rksomhed, men brugeren skulle ogsÃ¥ forstÃ¥, hvordan hun kunne deltage.",
+          "Vi undersøgte moderbrandets målgruppe og mulighederne for at nå en yngre gruppe gennem re-commerce. I den fælles konceptretning valgte vi primært at arbejde med kvinder i 30’erne.",
+          "Vores research var baseret på eksisterende viden og data. Vi gennemførte ikke brugerundersøgelser, så vi var opmærksomme på, at vores forståelse af målgruppen stadig indeholdt antagelser. En af dem var, at indsendelsen af tøjet kunne opleves som besværlig og uoverskuelig.",
+          "Det gjorde det relevant at tænke både kommunikation og brugerrejse ind i konceptet. En ny identitet skulle skabe opmærksomhed, men brugeren skulle også forstå, hvordan hun kunne deltage.",
         ],
       },
       {
-        heading: "En ny retning med et genkendeligt afsÃ¦t",
+        heading: "En ny retning med et genkendeligt afsæt",
         paragraphs: [
-          "Vi udviklede Go Rogue med inspiration fra LA RÅŒUGEs fortÃ¦lling om selvkÃ¦rlighed og retten til at vÃ¦re sig selv. Vi ville give den fortÃ¦lling et mere direkte og modigt udtryk.",
-          "Undervejs undersÃ¸gte vi forskellige visuelle retninger. Ã‰n lÃ¥ tÃ¦ttere pÃ¥ moderbrandets eksisterende univers, mens en anden havde mere kontrast og kant. Vi valgte at arbejde videre med den mere markante retning for at give re-commerce-konceptet sin egen plads.",
+          "Vi udviklede Go Rogue med inspiration fra LA RÅŒUGEs fortælling om selvkærlighed og retten til at være sig selv. Vi ville give den fortælling et mere direkte og modigt udtryk.",
+          "Undervejs undersøgte vi forskellige visuelle retninger. Én lå tættere på moderbrandets eksisterende univers, mens en anden havde mere kontrast og kant. Vi valgte at arbejde videre med den mere markante retning for at give re-commerce-konceptet sin egen plads.",
           "Det var interessant at eksperimentere med, hvor langt vi kunne skubbe udtrykket og stadig bevare forbindelsen til LA RÅŒUGE.",
         ],
         media: {
           layout: "comparison",
           items: [
             picture(
-              "UndersÃ¸gt retning",
-              "En retning med tÃ¦ttere forbindelse til moderbrandets eksisterende udtryk.",
+              "Undersøgt retning",
+              "En retning med tættere forbindelse til moderbrandets eksisterende udtryk.",
             ),
             picture(
               "Valgt retning",
@@ -260,7 +260,7 @@ export const semesterCases = [
       {
         heading: "Identiteten i detaljer",
         paragraphs: [
-          "Her er de vigtigste dele af den visuelle identitet samlet. De viser, hvordan logo, typografi, farver og billedstil fungerer som Ã©t univers.",
+          "Her er de vigtigste dele af den visuelle identitet samlet. De viser, hvordan logo, typografi, farver og billedstil fungerer som ét univers.",
         ],
         media: {
           layout: "carousel",
@@ -270,7 +270,7 @@ export const semesterCases = [
               "Farver og typografi",
               "Identitetens farver og typografiske hierarki.",
             ),
-            picture("Billedstil", "Eksempler pÃ¥ identitetens billedbrug."),
+            picture("Billedstil", "Eksempler på identitetens billedbrug."),
           ],
         },
       },
@@ -278,33 +278,33 @@ export const semesterCases = [
         heading: "Fra identitet til digital oplevelse",
         paragraphs: [
           "Identiteten blev omsat til en Figma-prototype, hvor brandets udtryk og brugerens handlinger skulle fungere sammen.",
-          "[Udfyld fÃ¸r aflevering: Beskriv et konkret eksempel fra jeres kÃ¸bs- eller salgsflow. Hvad Ã¦ndrede I, og hvordan adresserede det brugerens usikkerhed eller besvÃ¦r?]",
+          "[Udfyld før aflevering: Beskriv et konkret eksempel fra jeres købs- eller salgsflow. Hvad ændrede I, og hvordan adresserede det brugerens usikkerhed eller besvær?]",
         ],
         media: {
           layout: "carousel",
           items: [
             picture(
               "Indgangen til konceptet",
-              "Hvordan brugeren mÃ¸der Go Rogue.",
+              "Hvordan brugeren møder Go Rogue.",
             ),
             picture(
-              "SÃ¦lg dit tÃ¸j",
-              "Et centralt trin i sÃ¦lgerens brugerrejse.",
+              "Sælg dit tøj",
+              "Et centralt trin i sælgerens brugerrejse.",
             ),
-            picture("KÃ¸b brugt", "Et centralt trin i kÃ¸berens brugerrejse."),
+            picture("Køb brugt", "Et centralt trin i køberens brugerrejse."),
           ],
         },
       },
       {
         heading: "Min rolle",
         paragraphs: [
-          "[Udfyld fÃ¸r aflevering: Beskriv dit konkrete bidrag til research, navn, logo, visuel retning, tekster eller prototype. Hvilke beslutninger traf I sammen?]",
+          "[Udfyld før aflevering: Beskriv dit konkrete bidrag til research, navn, logo, visuel retning, tekster eller prototype. Hvilke beslutninger traf I sammen?]",
         ],
       },
     ],
     reflection: [
-      "Go Rogue gav mig mulighed for at arbejde med et eksisterende brand og samtidig udfordre dets udtryk. Det krÃ¦vede, at vi bÃ¥de forstod udgangspunktet og turde undersÃ¸ge en anden retning.",
-      "Jeg tager isÃ¦r med mig, at en stÃ¦rk identitet og en overskuelig brugerrejse skal understÃ¸tte hinanden. Vores koncept er et bud pÃ¥, hvordan re-commerce kan fÃ¥ mere opmÃ¦rksomhed, men det krÃ¦ver afprÃ¸vning med mÃ¥lgruppen at vurdere, om lÃ¸sningen ogsÃ¥ fÃ¥r flere til at sende deres tÃ¸j ind.",
+      "Go Rogue gav mig mulighed for at arbejde med et eksisterende brand og samtidig udfordre dets udtryk. Det krævede, at vi både forstod udgangspunktet og turde undersøge en anden retning.",
+      "Jeg tager især med mig, at en stærk identitet og en overskuelig brugerrejse skal understøtte hinanden. Vores koncept er et bud på, hvordan re-commerce kan få mere opmærksomhed, men det kræver afprøvning med målgruppen at vurdere, om løsningen også får flere til at sende deres tøj ind.",
     ],
   },
 ];

@@ -20,38 +20,38 @@ export const projects = [
   {
     slug: "anarkist-etiketter",
     number: "01",
-    title: "Ã˜letiketter til Anarkist",
+    title: "Øletiketter til Anarkist",
     year: "2026",
-    category: "Emballagedesign Â· Grafisk design",
+    category: "Emballagedesign · Grafisk design",
     intro:
-      "Tre forskellige Ã¸l, tre fortÃ¦llinger og Ã©n samlet serie af etiketter.",
+      "Tre forskellige øl, tre fortællinger og én samlet serie af etiketter.",
     services: "Koncept, illustration, emballagedesign",
-    tools: "Illustrator Â· Photoshop",
+    tools: "Illustrator · Photoshop",
     description:
-      "Et studieprojekt fra Creative Craft, hvor jeg udviklede etiketter til tre fiktive Ã¸l i Anarkists univers. Jeg arbejdede med illustration, farve og komposition for at give Free Spirit, Smoked Rebel og Dark Manifest hver deres karakter.",
+      "Et studieprojekt fra Creative Craft, hvor jeg udviklede etiketter til tre fiktive øl i Anarkists univers. Jeg arbejdede med illustration, farve og komposition for at give Free Spirit, Smoked Rebel og Dark Manifest hver deres karakter.",
     story: [
       {
         heading: "Om projektet",
         paragraphs: [
-          "Et designprojekt fra Creative Craft, hvor jeg arbejdede med Ã¸letiketter til det danske brand Anarkist.",
-          "Jeg fokuserede pÃ¥ at indfange essensen af brandet og dets produkter og samtidig skabe en sammenhÃ¦ngende visuel identitet. Det var lidt udfordrende, fordi Anarkist har en meget sÃ¦rlig og markant stil, men jeg nÃ¸d at eksperimentere med en anden stil end den, jeg er vant til.",
-          "Jeg brugte AI som hjÃ¦lp til at finde frem til, hvilke Ã¸ltyper jeg ville designe etiketter til.",
+          "Et designprojekt fra Creative Craft, hvor jeg arbejdede med øletiketter til det danske brand Anarkist.",
+          "Jeg fokuserede på at indfange essensen af brandet og dets produkter og samtidig skabe en sammenhængende visuel identitet. Det var lidt udfordrende, fordi Anarkist har en meget særlig og markant stil, men jeg nød at eksperimentere med en anden stil end den, jeg er vant til.",
+          "Jeg brugte AI som hjælp til at finde frem til, hvilke øltyper jeg ville designe etiketter til.",
         ],
       },
     ],
     reflection: [
-      "Intet er nogensinde for svÃ¦rt at lÃ¦re â€“ det er mit mantra.",
-      "I dette projekt arbejdede jeg med Photoshop og Illustrator for allerfÃ¸rste gang. Det krÃ¦vede tid og energi at lÃ¦re vÃ¦rktÃ¸jerne at kende, men med tÃ¥lmodighed og Ã¸velse fik jeg lavet et slutprodukt, som jeg er stolt af.",
-      "Det var ogsÃ¥ fÃ¸rste gang, jeg tegnede pÃ¥ en tablet. Jeg har aldrig syntes, at jeg var sÃ¦rligt god til at tegne, men jeg ville udfordre mig selv og prÃ¸ve noget nyt.",
-      "For mig handler det om at skubbe til mine egne grÃ¦nser og udforske nye kreative muligheder. Projektet gav mig mulighed for at trÃ¦de ud af min komfortzone og udvikle mig som designer.",
+      "Intet er nogensinde for svært at lære – det er mit mantra.",
+      "I dette projekt arbejdede jeg med Photoshop og Illustrator for allerførste gang. Det krævede tid og energi at lære værktøjerne at kende, men med tålmodighed og øvelse fik jeg lavet et slutprodukt, som jeg er stolt af.",
+      "Det var også første gang, jeg tegnede på en tablet. Jeg har aldrig syntes, at jeg var særligt god til at tegne, men jeg ville udfordre mig selv og prøve noget nyt.",
+      "For mig handler det om at skubbe til mine egne grænser og udforske nye kreative muligheder. Projektet gav mig mulighed for at træde ud af min komfortzone og udvikle mig som designer.",
     ],
     cover: anarkistCover,
     coverAlt:
-      "Tre Ã¸ldÃ¥ser med etiketterne Free Spirit, Smoked Rebel og Dark Manifest",
+      "Tre øldåser med etiketterne Free Spirit, Smoked Rebel og Dark Manifest",
     gallery: [
       {
         src: freeSpirit,
-        alt: "Free Spirit etiketten pÃ¥ dÃ¥se",
+        alt: "Free Spirit etiketten på dåse",
         caption: "Free Spirit",
       },
       {
@@ -60,7 +60,7 @@ export const projects = [
       },
       {
         src: smokedRebel,
-        alt: "Smoked Rebel etiketten pÃ¥ dÃ¥se",
+        alt: "Smoked Rebel etiketten på dåse",
         caption: "Smoked Rebel",
       },
       {
@@ -69,7 +69,7 @@ export const projects = [
       },
       {
         src: darkManifest,
-        alt: "Dark Manifest etiketten pÃ¥ dÃ¥se",
+        alt: "Dark Manifest etiketten på dåse",
         caption: "Dark Manifest",
       },
       {
@@ -83,44 +83,44 @@ export const projects = [
     number: "02",
     title: "PubHub",
     year: "2026",
-    category: "Appdesign Â· UX/UI Â· React",
+    category: "Appdesign · UX/UI · React",
     intro:
-      "Et appkoncept, der hjÃ¦lper unge i Aarhus med at finde nye barer og oplevelser.",
+      "Et appkoncept, der hjælper unge i Aarhus med at finde nye barer og oplevelser.",
     services: "Koncept, UX/UI, prototype, frontend",
     description:
-      "I et gruppeprojekt pÃ¥ 2. semester undersÃ¸gte vi, hvordan man kan opdage flere steder at gÃ¥ ud i Aarhus. Vi begyndte med skitser og wireframes, fÃ¸r vi udviklede en Figma-prototype og en responsiv webapp i React.",
+      "I et gruppeprojekt på 2. semester undersøgte vi, hvordan man kan opdage flere steder at gå ud i Aarhus. Vi begyndte med skitser og wireframes, før vi udviklede en Figma-prototype og en responsiv webapp i React.",
     story: [
       {
         heading: "Om projektet",
         paragraphs: [
-          "PubHub var eksamensprojektet i WebApp pÃ¥ 2. semester. Opgaven var at skabe et appkoncept og designe og kode en responsiv webapp med React - og oprette dataen i en ekstern database (SupaBase).",
+          "PubHub var eksamensprojektet i WebApp på 2. semester. Opgaven var at skabe et appkoncept og designe og kode en responsiv webapp med React - og oprette dataen i en ekstern database (SupaBase).",
         ],
       },
       {
         heading: "Koncept",
         paragraphs: [
-          "Vi ville skabe en app, som vi selv fÃ¸lte, at vi manglede i vores hverdag som unge i Aarhus: en digital platform, der hjÃ¦lper brugerne med at opdage lokale events og barer og engagere sig i dem.",
-          "Man hÃ¸rer ofte, at folk i Aarhus gÃ¥r pÃ¥ de samme barer igen og igen. Ikke fordi de nÃ¸dvendigvis vil det, men fordi de ikke ved, hvor de ellers kan tage hen. Det behov ville vi gerne imÃ¸dekomme.",
+          "Vi ville skabe en app, som vi selv følte, at vi manglede i vores hverdag som unge i Aarhus: en digital platform, der hjælper brugerne med at opdage lokale events og barer og engagere sig i dem.",
+          "Man hører ofte, at folk i Aarhus går på de samme barer igen og igen. Ikke fordi de nødvendigvis vil det, men fordi de ikke ved, hvor de ellers kan tage hen. Det behov ville vi gerne imødekomme.",
         ],
       },
       {
         heading: "Proces",
         paragraphs: [
-          "Vi ville virkelig have hÃ¦nderne i projektet, eksperimentere og arbejde grundigt med idÃ©erne. Derfor begyndte vi med papirskitser og enkle wireframes, fÃ¸r vi gik videre til detaljerede designs i Figma.",
-          "Den tilgang gav os mulighed for at afprÃ¸ve idÃ©er og vÃ¦re kreative i lÃ¦ngere tid, end vi oplever, nÃ¥r vi starter direkte pÃ¥ skÃ¦rmen.",
-          "Vi inddrog brugerne tidligt i processen med test pÃ¥ wireframes for at fÃ¥ feedback og justere vores idÃ©er - hvad var godt, hvad forvirrede? Hvilke funktioner var mest relevante? Det gav os et godt grundlag for at udvikle en prototype, som vi kunne teste mere detaljeret.",
+          "Vi ville virkelig have hænderne i projektet, eksperimentere og arbejde grundigt med idéerne. Derfor begyndte vi med papirskitser og enkle wireframes, før vi gik videre til detaljerede designs i Figma.",
+          "Den tilgang gav os mulighed for at afprøve idéer og være kreative i længere tid, end vi oplever, når vi starter direkte på skærmen.",
+          "Vi inddrog brugerne tidligt i processen med test på wireframes for at få feedback og justere vores idéer - hvad var godt, hvad forvirrede? Hvilke funktioner var mest relevante? Det gav os et godt grundlag for at udvikle en prototype, som vi kunne teste mere detaljeret.",
         ],
       },
       {
-        heading: "â€¦PubHub?",
+        heading: "…PubHub?",
         paragraphs: [
-          "Ja, vi ved det godt. Vi ville skabe et design, der var sjovt, engagerende og fik folk til at vende hovedet. Vi lod os inspirere af Pornhubs meget genkendelige visuelle identitet og oplevede, at folk blev nysgerrige pÃ¥ vores koncept.",
-          "Det var et eksperiment, og det virkede, som vi havde hÃ¥bet.",
+          "Ja, vi ved det godt. Vi ville skabe et design, der var sjovt, engagerende og fik folk til at vende hovedet. Vi lod os inspirere af Pornhubs meget genkendelige visuelle identitet og oplevede, at folk blev nysgerrige på vores koncept.",
+          "Det var et eksperiment, og det virkede, som vi havde håbet.",
         ],
       },
     ],
     reflection:
-      "PubHub lÃ¦rte mig, hvor meget brugerens konkrete situation kan pÃ¥virke det interface, vi udvikler. Et design kan godt vÃ¦re visuelt stÃ¦rkt uden at blive svÃ¦rt at bruge, hvis hierarki og handlinger er tydelige og intuitive for den, der skal bruge det.",
+      "PubHub lærte mig, hvor meget brugerens konkrete situation kan påvirke det interface, vi udvikler. Et design kan godt være visuelt stærkt uden at blive svært at bruge, hvis hierarki og handlinger er tydelige og intuitive for den, der skal bruge det.",
     cover: pubhubCover,
     coverAlt: "Pubhub Poster",
     coverPosition: "center center",
@@ -129,7 +129,7 @@ export const projects = [
     previewKind: "phone",
     links: [
       {
-        label: "PrÃ¸v appen",
+        label: "Prøv appen",
         url: "https://eaa25mtha.github.io/webapp-eksamen/",
       },
     ],
@@ -137,37 +137,37 @@ export const projects = [
   {
     slug: "loebet-filmplakat",
     number: "03",
-    title: "LÃ¸bet",
+    title: "Løbet",
     year: "2026",
-    category: "Plakatdesign Â· Visuel fortÃ¦lling",
+    category: "Plakatdesign · Visuel fortælling",
     intro:
-      "En filmplakat, der omsÃ¦tter en aktuel uro til et dramatisk visuelt udtryk.",
+      "En filmplakat, der omsætter en aktuel uro til et dramatisk visuelt udtryk.",
     services: "Koncept, billedbehandling, plakatdesign",
-    tools: "Photoshop Â· Illustrator",
+    tools: "Photoshop · Illustrator",
     description:
-      "Plakaten blev til under Creative Content i januar 2026. Jeg tog afsÃ¦t i mine tanker om truslerne mod GrÃ¸nland og undersÃ¸gte, hvordan stemning, billedsammensÃ¦tning og typografi kunne bÃ¦re fortÃ¦llingen.",
+      "Plakaten blev til under Creative Content i januar 2026. Jeg tog afsæt i mine tanker om truslerne mod Grønland og undersøgte, hvordan stemning, billedsammensætning og typografi kunne bære fortællingen.",
     story: [
       {
         heading: "Bag plakaten",
         paragraphs: [
-          "Filmplakaten blev skabt pÃ¥ Creative Content-forlÃ¸bet. Den tager udgangspunkt i mine egne tanker og bekymringer pÃ¥ det tidspunkt, hvor jeg lavede den: januar 2026.",
-          "Trump truede med at 'tage' GrÃ¸nland med magt, hvis det blev nÃ¸dvendigt, og det fyldte meget i mine tanker. Jeg ville omsÃ¦tte min frygt og mine tanker til et visuelt udtryk og eksperimentere med komposition, billeder og stemning.",
+          "Filmplakaten blev skabt på Creative Content-forløbet. Den tager udgangspunkt i mine egne tanker og bekymringer på det tidspunkt, hvor jeg lavede den: januar 2026.",
+          "Trump truede med at 'tage' Grønland med magt, hvis det blev nødvendigt, og det fyldte meget i mine tanker. Jeg ville omsætte min frygt og mine tanker til et visuelt udtryk og eksperimentere med komposition, billeder og stemning.",
         ],
       },
     ],
     reflection:
-      "Plakaten var en mulighed for at undersÃ¸ge, hvordan et personligt afsÃ¦t kan blive til en visuel fortÃ¦lling. Jeg ville lade billederne og atmosfÃ¦ren formidle fÃ¸lelsen uden at forklare den i en lang tekst.",
+      "Plakaten var en mulighed for at undersøge, hvordan et personligt afsæt kan blive til en visuel fortælling. Jeg ville lade billederne og atmosfæren formidle følelsen uden at forklare den i en lang tekst.",
     cover: movieCover,
-    coverAlt: "Filmplakaten LÃ¸bet vist pÃ¥ en plakatvÃ¦g",
+    coverAlt: "Filmplakaten Løbet vist på en plakatvæg",
     gallery: [
       {
         src: movieDetail,
-        alt: "Detalje af filmplakaten LÃ¸bet",
-        caption: "Plakaten tÃ¦t pÃ¥",
+        alt: "Detalje af filmplakaten Løbet",
+        caption: "Plakaten tæt på",
       },
       {
         src: movieCover,
-        alt: "Filmplakaten LÃ¸bet i omgivelserne",
+        alt: "Filmplakaten Løbet i omgivelserne",
         caption: "Plakaten i kontekst",
       },
     ],
@@ -177,51 +177,51 @@ export const projects = [
     number: "04",
     title: "Spotify Shorts",
     year: "2026",
-    category: "Motion design Â· Musik",
+    category: "Motion design · Musik",
     intro:
-      "To korte musikvisuals: Min eneste rus og Hot, samlet i Ã©t motion design-projekt.",
+      "To korte musikvisuals: Min eneste rus og Hot, samlet i ét motion design-projekt.",
     services: "Animation, komposition, timing",
-    tools: "After Effects Â· Photoshop",
+    tools: "After Effects · Photoshop",
     description:
-      "Jeg brugte to sange som anledning til at lÃ¦re After Effects og eksperimentere med rytme, bevÃ¦gelse og visuel stemning. Begge animationer ligger pÃ¥ denne side, sÃ¥ man kan se, hvordan jeg arbejdede med det samme korte format pÃ¥ to forskellige mÃ¥der.",
+      "Jeg brugte to sange som anledning til at lære After Effects og eksperimentere med rytme, bevægelse og visuel stemning. Begge animationer ligger på denne side, så man kan se, hvordan jeg arbejdede med det samme korte format på to forskellige måder.",
     story: [
       {
         heading: "Om projektet",
         paragraphs: [
-          "To korte visualiseringer til nogle af mine yndlingssange pÃ¥ det tidspunkt, skabt mens jeg lÃ¦rte Adobe After Effects at kende.",
-          "MÃ¥let var at eksperimentere med bevÃ¦gelse, timing og visuel fortÃ¦lling, samtidig med at jeg lÃ¦rte et helt nyt program.",
+          "To korte visualiseringer til nogle af mine yndlingssange på det tidspunkt, skabt mens jeg lærte Adobe After Effects at kende.",
+          "Målet var at eksperimentere med bevægelse, timing og visuel fortælling, samtidig med at jeg lærte et helt nyt program.",
         ],
       },
       {
-        heading: "01 Â· Min eneste rus",
+        heading: "01 · Min eneste rus",
         paragraphs: [
-          "I visualiseringen til Barselonas 'Min eneste rus' fokuserede jeg pÃ¥ at lÃ¦re grundfunktionerne i After Effects og undersÃ¸ge, hvordan bevÃ¦gelse kan understÃ¸tte sangens fÃ¸lelse og rytme.",
-          "Jeg arbejdede med timing, komposition og overgange og undersÃ¸gte, hvordan man kan styrke en visuel fortÃ¦lling pÃ¥ bare fÃ¥ sekunder.",
+          "I visualiseringen til Barselonas 'Min eneste rus' fokuserede jeg på at lære grundfunktionerne i After Effects og undersøge, hvordan bevægelse kan understøtte sangens følelse og rytme.",
+          "Jeg arbejdede med timing, komposition og overgange og undersøgte, hvordan man kan styrke en visuel fortælling på bare få sekunder.",
         ],
         links: [
           {
-            label: "HÃ¸r Min eneste rus",
+            label: "Hør Min eneste rus",
             url: "https://open.spotify.com/track/7mrhoZ9D53DgtlutlmTOYE?si=4820c9c2b0c24db4",
           },
         ],
       },
       {
-        heading: "02 Â· Hot",
+        heading: "02 · Hot",
         paragraphs: [
-          "I den anden animation ville jeg skubbe det visuelle udtryk lÃ¦ngere og prÃ¸ve en anden tilgang til bevÃ¦gelse og tempo.",
-          "Jeg havde allerede lÃ¦rt nogle af grundvÃ¦rktÃ¸jerne og kunne derfor bruge mere tid pÃ¥ at eksperimentere og skabe en animation, der passede til sangens personlighed.",
-          "Jeg ville ogsÃ¥ prÃ¸ve at animere en tegnet figur, sÃ¥ jeg tegnede den i Photoshop.",
+          "I den anden animation ville jeg skubbe det visuelle udtryk længere og prøve en anden tilgang til bevægelse og tempo.",
+          "Jeg havde allerede lært nogle af grundværktøjerne og kunne derfor bruge mere tid på at eksperimentere og skabe en animation, der passede til sangens personlighed.",
+          "Jeg ville også prøve at animere en tegnet figur, så jeg tegnede den i Photoshop.",
         ],
         links: [
           {
-            label: "HÃ¸r Hot",
+            label: "Hør Hot",
             url: "https://open.spotify.com/track/6ZrzenY5yEFciqcIUmZSYS?si=4ed3a7118f8b4b82",
           },
         ],
       },
     ],
     reflection:
-      "De to videoer viser min udvikling undervejs. I den fÃ¸rste brugte jeg meget energi pÃ¥ at lÃ¦re vÃ¦rktÃ¸jet. I den anden havde jeg mere overskud til at prÃ¸ve idÃ©er af og lade animationen passe til sangens personlighed.",
+      "De to videoer viser min udvikling undervejs. I den første brugte jeg meget energi på at lære værktøjet. I den anden havde jeg mere overskud til at prøve idéer af og lade animationen passe til sangens personlighed.",
     cover: spotifyCover,
     coverAlt: "Stillbillede fra Spotify-animationen Min eneste rus",
     gallery: [
@@ -229,16 +229,16 @@ export const projects = [
         type: "video",
         src: minEnesteRus,
         poster: spotifyCover,
-        caption: "Min eneste rus Â· Barselona",
+        caption: "Min eneste rus · Barselona",
         description:
-          "Den fÃ¸rste visualisering, hvor jeg undersÃ¸gte, hvordan timing og bevÃ¦gelse kan fÃ¸lge sangens stemning.",
+          "Den første visualisering, hvor jeg undersøgte, hvordan timing og bevægelse kan følge sangens stemning.",
       },
       {
         type: "video",
         src: hot,
-        caption: "Hot Â· Emil Kruse",
+        caption: "Hot · Emil Kruse",
         description:
-          "En anden tilgang med fokus pÃ¥ tempo, typografi og kontrast.",
+          "En anden tilgang med fokus på tempo, typografi og kontrast.",
       },
     ],
   },
@@ -246,41 +246,41 @@ export const projects = [
     slug: "lumina-one",
     number: "05",
     title: "Lumina One",
-    category: "Webdesign Â· Frontend",
+    category: "Webdesign · Frontend",
     intro:
-      "Et website fra fÃ¸rste semester med fokus pÃ¥ designsystem og interaktive komponenter.",
+      "Et website fra første semester med fokus på designsystem og interaktive komponenter.",
     services: "Designsystem, prototype, frontend",
     description:
-      "Mit eksamensprojekt fra fÃ¸rste semester. Jeg arbejdede med at omsÃ¦tte et designsystem til komponenter og en interaktiv hjemmeside. Den levende side og prototypen kan udforskes via linkene herunder.",
+      "Mit eksamensprojekt fra første semester. Jeg arbejdede med at omsætte et designsystem til komponenter og en interaktiv hjemmeside. Den levende side og prototypen kan udforskes via linkene herunder.",
     story: [
       {
         heading: "Om projektet",
         paragraphs: [
-          "Eksamensprojekt fra 1. semester med fokus pÃ¥ designsystem, komponenter og interaktivitet.",
-          "Opgaven bestod i at skulle optimere og forbedre et tidligere projekt pÃ¥ 1. semester.",
+          "Eksamensprojekt fra 1. semester med fokus på designsystem, komponenter og interaktivitet.",
+          "Opgaven bestod i at skulle optimere og forbedre et tidligere projekt på 1. semester.",
         ],
       },
       {
         heading: "Proces",
         paragraphs: [
-          "Jeg tog udgangspunkt i det fÃ¸rste projekt pÃ¥ 1. semester.",
-          "Jeg arbejdede med at omsÃ¦tte designsystemet til interaktive komponenter, gÃ¸re siden mere Ã¦stetisk tiltalende og brugervenlig. Derudover arbejdede jeg pÃ¥ at forbedre og optimere min kode - som jeg sidenhen har lÃ¦rt meget mere om. Dette var det sidste projekt, vi kodede uden React.js",
-          "I Figma arbejdede jeg med at skabe en prototype, der kunne demonstrere de interaktive elementer og komponenter - samt opsÃ¦tte et godt designsystem med det udgangspunkt, at en anden skulle kunne overtage min prototype.",
+          "Jeg tog udgangspunkt i det første projekt på 1. semester.",
+          "Jeg arbejdede med at omsætte designsystemet til interaktive komponenter, gøre siden mere æstetisk tiltalende og brugervenlig. Derudover arbejdede jeg på at forbedre og optimere min kode - som jeg sidenhen har lært meget mere om. Dette var det sidste projekt, vi kodede uden React.js",
+          "I Figma arbejdede jeg med at skabe en prototype, der kunne demonstrere de interaktive elementer og komponenter - samt opsætte et godt designsystem med det udgangspunkt, at en anden skulle kunne overtage min prototype.",
         ],
       },
       {
         heading: "Oprindeligt projekt",
         paragraphs: [
-          "Vores opgave bestod i at designe en Landingsside for Lumina One - en hÃ¸jtaler designet til unge, sociale kvinder i uddannelse.",
-          "Vi satte fokus pÃ¥ at skabe en visuel identitet, der appellerede til mÃ¥lgruppen - bÃ¥de by day og by night.",
-          "Der er helt klart flere ting, jeg kunne og ville have forbedret - sÃ¦rligt designmÃ¦ssigt. Men med den tid og de evner, jeg havde pÃ¥ det givne tidspunkt, er jeg stolt af, hvor langt jeg kom og den lÃ¦ring, jeg har taget med mig.",
+          "Vores opgave bestod i at designe en Landingsside for Lumina One - en højtaler designet til unge, sociale kvinder i uddannelse.",
+          "Vi satte fokus på at skabe en visuel identitet, der appellerede til målgruppen - både by day og by night.",
+          "Der er helt klart flere ting, jeg kunne og ville have forbedret - særligt designmæssigt. Men med den tid og de evner, jeg havde på det givne tidspunkt, er jeg stolt af, hvor langt jeg kom og den læring, jeg har taget med mig.",
         ],
       },
     ],
     reflection:
-      "I dette projekt oplevede jeg en stor tilfredsstillelse i at optimere og forbedre kode, design og system. Det var en lÃ¦rerig proces, hvor jeg kunne se, hvordan smÃ¥ Ã¦ndringer kunne have stor indflydelse pÃ¥ det endelige resultat - funktionalitet og oplevelse. Jeg har sidenhen brugt denne erfaring og tilfredsstillelse som et springbrÃ¦t til det detaljerede arbejde med designsystemer, komponenter og interaktivitet.",
+      "I dette projekt oplevede jeg en stor tilfredsstillelse i at optimere og forbedre kode, design og system. Det var en lærerig proces, hvor jeg kunne se, hvordan små ændringer kunne have stor indflydelse på det endelige resultat - funktionalitet og oplevelse. Jeg har sidenhen brugt denne erfaring og tilfredsstillelse som et springbræt til det detaljerede arbejde med designsystemer, komponenter og interaktivitet.",
     cover: luminaCover,
-    coverAlt: "SkÃ¦rmbillede af Lumina One-hjemmesiden",
+    coverAlt: "Skærmbillede af Lumina One-hjemmesiden",
     coverPosition: "center center",
     theme: "lumina",
     previewUrl: "https://millehlauridsen-ops.github.io/luminaResponsive/",
@@ -305,37 +305,37 @@ export const projects = [
     slug: "customer-experience",
     number: "06",
     title: "Customer Experience",
-    category: "Webdesign Â· Brugeroplevelse",
+    category: "Webdesign · Brugeroplevelse",
     intro:
-      "Et digitalt koncept (retailer) med fokus pÃ¥ mÃ¥lgruppe, visuel identitet og brugerrejse.",
+      "Et digitalt koncept (retailer) med fokus på målgruppe, visuel identitet og brugerrejse.",
     services: "Brugerrejse, visuel identitet, prototype",
     description:
-      "I dette projekt arbejdede vi med sammenhÃ¦ngen mellem mÃ¥lgruppe, visuel identitet og den oplevelse, brugeren mÃ¸der pÃ¥ hjemmesiden. Se lÃ¸sningen og prototypen via linkene.",
+      "I dette projekt arbejdede vi med sammenhængen mellem målgruppe, visuel identitet og den oplevelse, brugeren møder på hjemmesiden. Se løsningen og prototypen via linkene.",
     story: [
       {
         heading: "Om projektet",
         paragraphs: [
-          "Et Customer Experience-projekt med fokus pÃ¥ mÃ¥lgruppe, visuel identitet og brugerrejser.",
+          "Et Customer Experience-projekt med fokus på målgruppe, visuel identitet og brugerrejser.",
         ],
       },
       {
         heading: "Proces",
         paragraphs: [
-          "I dette projekt arbejdede vi med at kortlÃ¦gge brugerrejsen og identificere de vigtigste touchpoints. Vi udviklede en visuel identitet, der understÃ¸ttede brugerens oplevelse og ego - hvad er vigtigt for dem? Hvem er de?",
+          "I dette projekt arbejdede vi med at kortlægge brugerrejsen og identificere de vigtigste touchpoints. Vi udviklede en visuel identitet, der understøttede brugerens oplevelse og ego - hvad er vigtigt for dem? Hvem er de?",
         ],
       },
       {
         heading: "Research",
         paragraphs: [
-          "Vi havde ikke tid eller ressourcer til at teste vores mÃ¥lgruppe i dybden, hvilket kunne have afkrÃ¦ftet eller bekrÃ¦ftet nogle af de antagelser vi lavede, men vi var meget opmÃ¦rksomme pÃ¥ det undervejs.",
-          "Vi arbejdede med brugerresearch og data (statistik, rapporter mm.) for at informere vores designbeslutninger og sikre, at vi adresserede de rigtige behov - dette er dog stadig bare antagelser, man pÃ¥ det rigtige marked ville skulle validere og teste.",
+          "Vi havde ikke tid eller ressourcer til at teste vores målgruppe i dybden, hvilket kunne have afkræftet eller bekræftet nogle af de antagelser vi lavede, men vi var meget opmærksomme på det undervejs.",
+          "Vi arbejdede med brugerresearch og data (statistik, rapporter mm.) for at informere vores designbeslutninger og sikre, at vi adresserede de rigtige behov - dette er dog stadig bare antagelser, man på det rigtige marked ville skulle validere og teste.",
         ],
       },
     ],
     reflection:
-      "Jeg ser projektet som en Ã¸velse i at holde den visuelle retning og brugerens oplevelse samlet - ud fra research og data. Hvordan kan vi sikre, at vores designvalg er i trÃ¥d med brugernes behov og forventninger? Vi brugte ogsÃ¥ denne mulighed for at eksperimentere med en mÃ¥lgruppe, som skilte sig lidt ud i forhold til, hvad vi havde arbejdet med indtil da.",
+      "Jeg ser projektet som en øvelse i at holde den visuelle retning og brugerens oplevelse samlet - ud fra research og data. Hvordan kan vi sikre, at vores designvalg er i tråd med brugernes behov og forventninger? Vi brugte også denne mulighed for at eksperimentere med en målgruppe, som skilte sig lidt ud i forhold til, hvad vi havde arbejdet med indtil da.",
     cover: controlCover,
-    coverAlt: "SkÃ¦rmbillede af control-hjemmeside",
+    coverAlt: "Skærmbillede af control-hjemmeside",
     coverPosition: "center center",
     theme: "customer",
     previewUrl: "https://kubraf96.github.io/customer-experience-exam-trial/",
@@ -359,31 +359,31 @@ export const projects = [
     slug: "sundhedsshoppen",
     number: "07",
     title: "Sundhedsshoppen",
-    category: "Webdesign Â· RÃ¥dgivning",
+    category: "Webdesign · Rådgivning",
     intro:
-      "Et tidligt designudkast til en webshop udviklet som rÃ¥dgivning for en kunde.",
-    services: "RÃ¥dgivning, wireframes, prototype",
+      "Et tidligt designudkast til en webshop udviklet som rådgivning for en kunde.",
+    services: "Rådgivning, wireframes, prototype",
     description:
-      "Jeg hjalp med et udkast til Sundhedsshoppen i form af en tidlig prototype (mockup), hvor jeg havde fokus pÃ¥ at forsimple en proces for en mÃ¥lgruppe, der har brug for en nem brugerrejse og hurtig adgang til information.",
+      "Jeg hjalp med et udkast til Sundhedsshoppen i form af en tidlig prototype (mockup), hvor jeg havde fokus på at forsimple en proces for en målgruppe, der har brug for en nem brugerrejse og hurtig adgang til information.",
     story: [
       {
         heading: "Om projektet",
         paragraphs: [
-          "Jeg rÃ¥dgav en ven om en enkel, tidlig mockup til min vens kunde 'Sundhedsshoppen'. For denne mÃ¥lgruppe er det vigtigt at have en klar og overskuelig brugerrejse, der gÃ¸r det nemt for dem at finde de oplysninger, de har brug for - men pÃ¥ samme tid ogsÃ¥ fÃ¸le en personlig forbindelse til ejeren af webshoppen.",
+          "Jeg rådgav en ven om en enkel, tidlig mockup til min vens kunde 'Sundhedsshoppen'. For denne målgruppe er det vigtigt at have en klar og overskuelig brugerrejse, der gør det nemt for dem at finde de oplysninger, de har brug for - men på samme tid også føle en personlig forbindelse til ejeren af webshoppen.",
         ],
       },
       {
         heading: "Opgaven",
         paragraphs: [
-          "For ejeren af denne webshop er der sÃ¦rligt fokus pÃ¥ den personlige rÃ¥dgivning og skrÃ¦ddersyet service, hun tilbyder. PÃ¥ samme tid, skal processen forsimples for ejeren af webshoppen, sÃ¥ hver enkelte bruger ikke skal kontakte hende privat.",
-          "Dette var mit fÃ¸rste udkast og bud pÃ¥, hvordan man kunne imÃ¸dekomme ejeren af webshoppens Ã¸nske om personlig vejledning af hver enkelte bruger uden at overbelaste hende med forespÃ¸rgsler.",
+          "For ejeren af denne webshop er der særligt fokus på den personlige rådgivning og skræddersyet service, hun tilbyder. På samme tid, skal processen forsimples for ejeren af webshoppen, så hver enkelte bruger ikke skal kontakte hende privat.",
+          "Dette var mit første udkast og bud på, hvordan man kunne imødekomme ejeren af webshoppens ønske om personlig vejledning af hver enkelte bruger uden at overbelaste hende med forespørgsler.",
         ],
       },
     ],
     reflection:
-      "Projektet er et lo-fi udkast, der fokuserer pÃ¥ at skabe en enkel og overskuelig brugerrejse. Det var interessant at arbejde pÃ¥ en konkret webshop og skabe en lÃ¸sning, der imÃ¸dekommer brugerens behov uden at gÃ¥ pÃ¥ kompromis med ejeren af webshoppens vÃ¦rdigrundlag.",
+      "Projektet er et lo-fi udkast, der fokuserer på at skabe en enkel og overskuelig brugerrejse. Det var interessant at arbejde på en konkret webshop og skabe en løsning, der imødekommer brugerens behov uden at gå på kompromis med ejeren af webshoppens værdigrundlag.",
     cover: sundhedsshoppenCover,
-    coverAlt: "SkÃ¦rmbillede af Sundhedsshoppen-prototypen",
+    coverAlt: "Skærmbillede af Sundhedsshoppen-prototypen",
     coverPosition: "center center",
     theme: "sundhed",
     links: [

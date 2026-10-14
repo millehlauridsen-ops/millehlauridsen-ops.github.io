@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import Reveal from "../../components/Reveal/Reveal";
 import { projects } from "../../data/projects";
 import styles from "./ProjectPage.module.css";
-import CaseMedia from "../../components/CaseMedia/CaseMedia";
+import CaseMedia from "../../components/CaseMedia/ProjectMedia.jsx";
 
 function AnarkistCarousel({ images }) {
   const [pairIndex, setPairIndex] = useState(0);

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styles from "./CaseMedia.module.css";
+import styles from "./ProjectMedia.module.css";
 
 function MediaItem({ item, eager = false }) {
   const [failed, setFailed] = useState(false);

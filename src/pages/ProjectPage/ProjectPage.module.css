@@ -812,3 +812,116 @@
     width: min(250px, 72vw);
   }
 }
+
+/* Billeder mellem tekstafsnittene på de nye cases. */
+.caseMediaRow {
+  grid-column: 1 / -1;
+  min-width: 0;
+}
+
+/* Cases: samme rolige tekst-/billedopdeling som Om mig. */
+.casePage .hero {
+  padding-bottom: 42px;
+}
+.casePage .coverFull,
+.casePage .coverMedia,
+.casePage .coverImage {
+  min-height: 0;
+  height: clamp(240px, 36vh, 420px);
+}
+.casePage .overview {
+  padding: 58px 0;
+}
+.casePage .story {
+  margin-bottom: 60px;
+}
+.caseSplit {
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  grid-template-rows: auto 1fr;
+  column-gap: clamp(32px, 5vw, 72px);
+  row-gap: 22px;
+  padding: 52px 0;
+  align-items: start;
+}
+.caseSplit .storyHeading {
+  grid-column: 1;
+  grid-row: 1;
+}
+.caseSplit .storyHeading h2 {
+  font-size: clamp(1.85rem, 3vw, 2.8rem);
+  font-weight: 450;
+  line-height: 1.06;
+}
+.caseSplit .storyText {
+  grid-column: 1;
+  grid-row: 2;
+  max-width: 520px;
+}
+.caseSplit .caseMediaRow {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: center;
+  min-width: 0;
+}
+@media (max-width: 900px) {
+  .caseSplit {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    row-gap: 22px;
+    padding: 38px 0;
+  }
+  .caseSplit .storyHeading,
+  .caseSplit .storyText,
+  .caseSplit .caseMediaRow {
+    grid-column: 1;
+    grid-row: auto;
+  }
+  .caseSplit .storyText {
+    max-width: 680px;
+  }
+  .caseSplit .caseMediaRow {
+    margin-top: 6px;
+  }
+}
+
+/* Samme coverhøjde på alle projektsider */
+.cover,
+.coverFull,
+.coverMedia,
+.coverImage,
+.coverGraphic,
+.casePage .coverFull,
+.casePage .coverMedia,
+.casePage .coverImage {
+  min-height: 0;
+  height: clamp(280px, 48svh, 560px);
+}
+.caseTextAbove {
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+
+.caseTextAbove .storyHeading {
+  max-width: 700px;
+}
+
+.caseTextAbove .storyText {
+  max-width: none;
+  columns: 2;
+  column-gap: clamp(32px, 5vw, 72px);
+}
+
+.caseTextAbove .storyText p {
+  break-inside: avoid;
+}
+
+.caseTextAbove .caseMediaRow {
+  grid-column: 1;
+  margin-top: 12px;
+}
+
+@media (max-width: 900px) {
+  .caseTextAbove .storyText {
+    columns: 1;
+  }
+}

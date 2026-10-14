@@ -3,8 +3,54 @@ import ProjectHero from "../../components/ProjectHero/ProjectHero";
 import Reveal from "../../components/Reveal/Reveal";
 import { projects } from "../../data/projects";
 import styles from "./WorkPage.module.css";
+import { useState } from "react";
+
+const projectFilters = [
+  {
+    label: "Alle",
+    slugs: null,
+  },
+  {
+    label: "Web & apps",
+    slugs: ["mellemrum", "pubhub", "lumina-one"],
+  },
+  {
+    label: "Konceptudvikling & UX",
+    slugs: [
+      "pubhub",
+      "vuuh",
+      "go-rogue",
+      "customer-experience",
+      "sundhedsshoppen",
+      "lumina-one",
+    ],
+  },
+  {
+    label: "Grafisk & motion",
+    slugs: [
+      "anarkist-etiketter",
+      "loebet-filmplakat",
+      "spotify-shorts",
+      "go-rogue",
+    ],
+  },
+  {
+    label: "3. semester",
+    slugs: ["mellemrum", "vuuh", "go-rogue"],
+  },
+];
 
 export default function WorkPage() {
+  const [activeFilter, setActiveFilter] = useState("Alle");
+
+  const selectedFilter = projectFilters.find(
+    (filter) => filter.label === activeFilter,
+  );
+
+  const filteredProjects = projects.filter(
+    (project) =>
+      !selectedFilter.slugs || selectedFilter.slugs.includes(project.slug),
+  );
   return (
     <div>
       <ProjectHero
@@ -13,17 +59,45 @@ export default function WorkPage() {
       />
 
       <section className={styles.projects} aria-label="Alle projekter">
+        <div
+          className={styles.filters}
+          role="group"
+          aria-label="Filtrer projekter"
+        >
+          {projectFilters.map((filter) => (
+            <button
+              key={filter.label}
+              type="button"
+              aria-pressed={activeFilter === filter.label}
+              className={`${styles.filterButton} ${
+                activeFilter === filter.label ? styles.filterActive : ""
+              }`}
+              onClick={() => setActiveFilter(filter.label)}
+            >
+              {filter.label}
+            </button>
+          ))}
+        </div>
+
         <div className={styles.sectionHeading}>
-          <span>Alle projekter</span>
-          <span>{String(projects.length).padStart(2, "0")} i alt</span>
+          <span>
+            {activeFilter === "Alle" ? "Alle projekter" : activeFilter}
+          </span>
+
+          <span role="status" aria-live="polite" aria-atomic="true">
+            {filteredProjects.length}{" "}
+            {filteredProjects.length === 1 ? "projekt" : "projekter"}
+          </span>
         </div>
 
         <div className={styles.grid}>
-          {projects.map((project, index) => (
+          {filteredProjects.map((project) => (
             <Reveal key={project.slug}>
               <Link to={`/work/${project.slug}`} className={styles.card}>
                 <span
-                  className={`${styles.circle} ${styles[`circle${(index % 4) + 1}`]}`}
+                  className={`${styles.circle} ${
+                    styles[`circle${(projects.indexOf(project) % 4) + 1}`]
+                  }`}
                   aria-hidden="true"
                 />
                 <span className={styles.number}>

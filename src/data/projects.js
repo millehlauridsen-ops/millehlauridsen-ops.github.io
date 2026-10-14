@@ -1,3 +1,4 @@
+import { semesterCases } from "./semesterCases";
 import anarkistCover from "../assets/projects/beerlabels.png";
 import freeSpirit from "../assets/projects/freespirit1.png";
 import freeSpiritDetail from "../assets/projects/freespirit2.png";
@@ -16,6 +17,7 @@ import pubhubCover from "../assets/projects/pubhubposter.png";
 import controlCover from "../assets/projects/controlScreenshot.png";
 
 export const projects = [
+  ...semesterCases,
   {
     slug: "anarkist-etiketter",
     number: "01",

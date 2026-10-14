@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import Reveal from "../../components/Reveal/Reveal";
 import { projects } from "../../data/projects";
 import styles from "./ProjectPage.module.css";
+import CaseMedia from "../../components/CaseMedia/ProjectMedia.jsx";
 
 function AnarkistCarousel({ images }) {
   const [pairIndex, setPairIndex] = useState(0);
@@ -158,7 +159,9 @@ export default function ProjectPage() {
     : null;
 
   return (
-    <article className={styles.page}>
+    <article
+      className={`${styles.page} ${project.isSemesterCase ? styles.casePage : ""}`}
+    >
       <header className={styles.hero}>
         <div className={styles.top}>
           <span>
@@ -187,7 +190,6 @@ export default function ProjectPage() {
 
             <div className={styles.coverOverlay}>
               <span>{project.category}</span>
-              <strong>{project.title}</strong>
             </div>
           </div>
         ) : (
@@ -195,7 +197,6 @@ export default function ProjectPage() {
             className={`${styles.coverGraphic} ${styles[project.theme] || ""}`}
           >
             <span>{project.category}</span>
-            <strong>{project.title}</strong>
           </div>
         )}
       </div>
@@ -205,6 +206,12 @@ export default function ProjectPage() {
           <div>
             <p className={styles.label}>Discipliner</p>
             <span>{project.services}</span>
+            {project.collaboration && (
+              <>
+                <p className={styles.label}>Projektform</p>
+                <span>{project.collaboration}</span>
+              </>
+            )}
 
             {project.tools && (
               <>
@@ -239,7 +246,16 @@ export default function ProjectPage() {
       <Reveal>
         <section className={styles.story} aria-label="Projektets historie">
           {project.story?.map((section, sectionIndex) => (
-            <div className={styles.storySection} key={section.heading}>
+            <div
+              className={`${styles.storySection} ${
+                section.layout === "text-above"
+                  ? styles.caseTextAbove
+                  : project.isSemesterCase && section.media
+                    ? styles.caseSplit
+                    : ""
+              }`}
+              key={section.heading}
+            >
               <div className={styles.storyHeading}>
                 <span>{String(sectionIndex + 1).padStart(2, "0")}</span>
                 <h2>{section.heading}</h2>
@@ -261,6 +277,14 @@ export default function ProjectPage() {
                   </a>
                 ))}
               </div>
+              {section.media && (
+                <div className={styles.caseMediaRow}>
+                  <CaseMedia
+                    key={`${project.slug}-${sectionIndex}`}
+                    media={section.media}
+                  />
+                </div>
+              )}
             </div>
           ))}
         </section>

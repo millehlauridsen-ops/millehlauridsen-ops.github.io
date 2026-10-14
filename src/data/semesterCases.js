@@ -240,11 +240,12 @@ export const semesterCases = [
           "Vi undersøgte moderbrandets målgruppe og mulighederne for at nå en yngre gruppe gennem re-commerce. I den fælles konceptretning valgte vi primært at arbejde med kvinder i 30’erne, der finder styrke og fællesskab i det at være en selvstændig og moderne kvinde.",
           "Vi gennemførte ikke vores egne brugerundersøgelser, så vi var opmærksomme på, at vores ideer om målgruppen indeholdt antagelser. En af dem var, at indsendelsen af tøjet kunne opleves som besværlig og uoverskuelig.",
           "Vi satte derfor fokus på kommunikation og brugerrejse. En ny identitet skulle skabe opmærksomhed og resonere hos brugerne, og processen skulle på samme tid gøres mere simpel.",
-          "Vi lænede os ind i brandets historie om en mor-datter forbindelse for at skabe en følelsesmæssig forbindelse til brugerne - og for at kunne subbrandet plads til at have sit eget udtryk.",
+          "Vi lænede os ind i brandets historie om en mor-datter forbindelse for at skabe en følelsesmæssig forbindelse til brugerne - og for at give subbrandet plads til at have sit eget udtryk.",
         ],
       },
       {
-        heading: "En ny retning med et genkendeligt afsæt",
+        heading: "En helt ny retning med et genkendeligt afsæt",
+        layout: "text-above",
         paragraphs: [
           "Vi udviklede Go Rogue med inspiration fra LA ROUGEs fortælling om selvkærlighed og retten til at være sig selv og tage plads. Men vi ville give den fortælling et mere direkte og modigt udtryk, der læner sig op ad, hvad det vil sige at være en 'feminist' for den unge, moderne kvinde.",
           "Undervejs undersøgte vi forskellige visuelle retninger. Én lå tættere på moderbrandets eksisterende univers med rolige, dæmpede farver og klassisk stil, mens en anden havde mere kontrast og kant. Vi arbejdede videre med den mere markante retning, da den stil læner sig mere i en ungdommelig og dristig retning - som vi vurderede ville resonere med den yngre målgruppe.",
@@ -256,37 +257,51 @@ export const semesterCases = [
           items: [
             picture(
               "Undersøgt retning",
-              "En retning med tættere forbindelse til moderbrandets eksisterende udtryk.",
+              "Re Rouge: en undersøgt retning med dæmpede farver og et mere klassisk udtryk.",
+              "cases/go-rogue/undersoegt-retning.png",
             ),
             picture(
               "Valgt retning",
-              "Den mere markante retning, vi arbejdede videre med.",
+              "Go Rogue: den valgte retning med tydeligere kontraster og et mere modigt udtryk.",
+              "cases/go-rogue/valgt-retning.png",
             ),
           ],
         },
       },
       {
-        heading: "Identiteten i detaljer",
+        heading: "Designvalg",
         paragraphs: [
-          "Her er de vigtigste dele af den visuelle identitet samlet. De viser, hvordan logo, typografi, farver og billedstil fungerer som ét univers.",
+          "De røde farver er samplet fra rødstrømpeplakater og inspireret af rød læbestift. Vi ville koble referencen til rødstrømpebevægelsen med et mere moderne udtryk, der understøtter Go Rogues modige og direkte personlighed.",
+          "Navnet Go Rogue er en bogstavleg med LA RŌUGEs navn. Ved at bytte plads på U og G bliver Rouge til Rogue.",
+          "Logoets grafiske stil er et udkast, der efterligner en hilsen skrevet med læbestift på et spejl. Udtrykket kunne videreudvikles ved at skrive med rigtig læbestift og digitalisere resultatet for at få en mere autentisk tekstur.",
         ],
         media: {
           layout: "carousel",
           items: [
-            picture("Logo", "Go Rogues logo."),
             picture(
-              "Farver og typografi",
-              "Identitetens farver og typografiske hierarki.",
+              "Logo",
+              "Go Rogue-logoet med et udtryk inspireret af læbestift på et spejl.",
+              "cases/go-rogue/logo.png",
             ),
-            picture("Billedstil", "Eksempler på identitetens billedbrug."),
+            picture(
+              "Typografi",
+              "Go Rogues typografi.",
+              "cases/go-rogue/typografi.png",
+            ),
+            picture(
+              "Billedstil",
+              "Eksempler på Go Rogues billedstil.",
+              "cases/go-rogue/billedstil.png",
+            ),
           ],
         },
       },
       {
-        heading: "Fra identitet til digital oplevelse",
+        heading: "Konceptet uden for skærmen",
         paragraphs: [
-          "Identiteten blev omsat til en Figma-prototype, hvor brandets udtryk og brugerens handlinger skulle fungere sammen.",
-          "[Udfyld før aflevering: Beskriv et konkret eksempel fra jeres købs- eller salgsflow. Hvad ændrede I, og hvordan adresserede det brugerens usikkerhed eller besvær?]",
+          "Vi udviklede også hangtags, klistermærker og en note til de kasser, der sendes til kunderne. Her kunne vi folde Go Rogues identitet ud og tænke konceptet ind i den oplevelse, kunden får, når hun modtager tøjet.",
+          "Et hangtag med en QR-kode skulle gøre det muligt at registrere tøjet på sin profil ved køb, så det senere bliver nemmere at sende ind igen. Det hjerteformede hangtag understøtter samme idé med beskeden: 'Send me back, when you’re done'.",
+          "Klistermærkerne kombinerer LA RŌUGEs og Go Rogues logoer med læbestiftreferencer og korte budskaber. På den måde viser de både subbrandets eget udtryk og forbindelsen til moderbrandet.",
         ],
         media: {
           layout: "carousel",

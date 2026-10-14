@@ -247,7 +247,13 @@ export default function ProjectPage() {
         <section className={styles.story} aria-label="Projektets historie">
           {project.story?.map((section, sectionIndex) => (
             <div
-              className={`${styles.storySection} ${project.isSemesterCase && section.media ? styles.caseSplit : ""}`}
+              className={`${styles.storySection} ${
+                section.layout === "text-above"
+                  ? styles.caseTextAbove
+                  : project.isSemesterCase && section.media
+                    ? styles.caseSplit
+                    : ""
+              }`}
               key={section.heading}
             >
               <div className={styles.storyHeading}>

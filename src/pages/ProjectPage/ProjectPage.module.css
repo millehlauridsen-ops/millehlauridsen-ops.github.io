@@ -896,3 +896,32 @@
   min-height: 0;
   height: clamp(280px, 48svh, 560px);
 }
+.caseTextAbove {
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+
+.caseTextAbove .storyHeading {
+  max-width: 700px;
+}
+
+.caseTextAbove .storyText {
+  max-width: none;
+  columns: 2;
+  column-gap: clamp(32px, 5vw, 72px);
+}
+
+.caseTextAbove .storyText p {
+  break-inside: avoid;
+}
+
+.caseTextAbove .caseMediaRow {
+  grid-column: 1;
+  margin-top: 12px;
+}
+
+@media (max-width: 900px) {
+  .caseTextAbove .storyText {
+    columns: 1;
+  }
+}

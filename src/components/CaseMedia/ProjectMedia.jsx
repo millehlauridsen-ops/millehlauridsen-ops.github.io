@@ -7,16 +7,18 @@ function MediaItem({ item, eager = false }) {
     <figure className={styles.figure}>
       {item.src && !failed ? (
         item.type === "video" ? (
-          <video
-            controls
-            playsInline
-            preload="metadata"
-            aria-label={item.title}
-          >
-            <source src={item.src} type="video/mp4" />
-            Din browser understøtter ikke video.{" "}
-            <a href={item.src}>Åbn videoen</a>
-          </video>
+          <div className={styles.videoCrop}>
+            <video
+              controls
+              playsInline
+              preload="metadata"
+              aria-label={item.title}
+            >
+              <source src={item.src} type="video/mp4" />
+              Din browser understøtter ikke video.{" "}
+              <a href={item.src}>Åbn videoen</a>
+            </video>
+          </div>
         ) : (
           <img
             src={item.src}

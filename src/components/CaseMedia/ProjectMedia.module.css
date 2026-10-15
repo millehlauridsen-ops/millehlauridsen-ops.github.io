@@ -206,3 +206,45 @@
   margin: 0 auto;
   padding: 10px 0 0;
 }
+
+.comparison.registration {
+  width: 100%;
+  margin: 16px auto;
+  grid-template-columns: minmax(0, 1.22574fr) minmax(0, 2.00199fr);
+  gap: 32px;
+  align-items: start;
+}
+
+.comparison.registration .figure img {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  aspect-ratio: auto;
+  object-fit: contain;
+  border: 0;
+  background: transparent;
+}
+
+@media (max-width: 760px) {
+  .comparison.registration {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+.media:has(> .figure:nth-child(2)):not(.comparison) .figure img {
+  aspect-ratio: 2 / 1;
+}
+
+.figure figcaption {
+  color: inherit;
+}
+
+.media:has(> .figure:nth-child(2)):not(.comparison) .figure img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
+  border: 0;
+  background: transparent;
+}

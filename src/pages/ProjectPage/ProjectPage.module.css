@@ -925,3 +925,24 @@
     columns: 1;
   }
 }
+
+.darkSection {
+  margin: 32px 0;
+  padding: clamp(24px, 4vw, 56px);
+  border: 0;
+  border-radius: 16px;
+  background: #2c2c2c;
+  color: #fffceb;
+}
+
+.darkSection .storyHeading h2 {
+  color: #fffceb;
+}
+
+.darkSection .storyHeading span {
+  color: #f8d65d;
+}
+
+.darkSection .storyText p {
+  color: #fffceb;
+}

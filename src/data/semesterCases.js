@@ -15,16 +15,14 @@ export const semesterCases = [
     year: "2026",
     title: "Mellemrum",
     category: "React · Supabase · Produktoptimering",
-    intro:
-      "Fra en eksisterende prototype til et sammenhængende tilmeldingsflow.",
     services: "Frontend, datamodel, tilmeldingsflow",
     tools: "React · Supabase REST API · GitHub",
     collaboration: "Individuelt projekt · 3. semester",
     description:
-      "En kultur- og eventplatform, hvor jeg arbejdede med sammenhængen mellem kode, database og brugeroplevelse.",
+      "I Mellemrum arbejdede jeg videre på en eksisterende eventplatform. Jeg valgte at rydde op i koden og få løsningen til at hænge bedre sammen — både for brugeren, der tilmelder sig, og arrangøren, der skal holde styr på tilmeldingerne.",
     isSemesterCase: true,
-    // Eksempel: cover: asset("cases/mellemrum/forside.webp"),
-    coverAlt: "Eventoversigten i Mellemrum",
+    cover: asset("cases/mellemrum/cover.png"),
+    coverAlt: "Forsiden af Mellemrum med oversigt over kommende events",
     links: [
       {
         label: "Se hjemmesiden",
@@ -39,8 +37,8 @@ export const semesterCases = [
       {
         heading: "Om projektet",
         paragraphs: [
-          "Mellemrum var et individuelt projekt på 3. semester, hvor jeg overtog en eksisterende React-prototype. Platformen skulle gøre det nemt at finde og tilmelde sig kulturoplevelser i Aarhus, men flere dele af løsningen var kun påbegyndt.",
-          "Min opgave var at videreudvikle prototypen og arbejde med sammenhængen mellem kode, database og brugeroplevelse. Jeg havde særligt fokus på, hvordan en tilmelding kunne gemmes korrekt og efterfølgende vises i arrangørens overblik.",
+          "Mellemrum var et individuelt projekt på 3. semester, hvor vi fik udleveret en React-prototype, vi skulle arbejde videre på. Den grundlæggende løsning var der, men tilmeldingsformularen gemte ikke oplysningerne, og der manglede feedback, når siden hentede data eller noget gik galt.",
+          "Jeg valgte at fokusere på strukturen i koden og sammenhængen mellem events, lokationer og tilmeldinger. Jeg ville gerne få de centrale funktioner til at fungere sammen og gøre koden mere overskuelig at arbejde videre med.",
         ],
         media: {
           layout: "single",
@@ -51,6 +49,13 @@ export const semesterCases = [
             ),
           ],
         },
+      },
+      {
+        heading: "Mere overblik i koden",
+        paragraphs: [
+          "Jeg samlede gentagen kode og delte nogle af sidernes funktioner op i mindre komponenter. Footeren blev til en fælles komponent, og tilmeldingsformularen fik sin egen fil, så eventsiden ikke skulle stå for det hele.",
+          "Jeg samlede også kommunikationen med Supabase i en service-fil. På den måde kunne jeg genbruge funktionerne til at hente, oprette, opdatere og slette data uden at skrive de samme kald på hver side.",
+        ],
       },
       {
         heading: "Fra tilmelding til overblik",
@@ -126,80 +131,80 @@ export const semesterCases = [
     isSemesterCase: true,
     cover: asset("cases/vuuh/cover.png"),
     coverAlt: "Intro til onboarding i Vuuh",
-    // Tilføj dine egne links: { label: "Se Figma-prototypen", url: "https://..." }
-    links: [],
+    links: [
+      {
+        label: "Se Figma-prototypen",
+        url: "https://www.figma.com/proto/1B3oRCTfMeswoYOLLaLaVa/Case-2---Vuuh?node-id=2461-10639&viewport=428%2C314%2C0.08&t=kYJjtC7FuNPPSvmA-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=2461%3A10639&page-id=2195%3A3844",
+      },
+    ],
     story: [
       {
         heading: "Om projektet",
         paragraphs: [
-          "Vuuh var et gruppeprojekt på 3. semester, hvor vi arbejdede med onboarding i en eksisterende fashion tech-løsning. Produktet hjælper webshopejere med at hente produktdata fra brands, men opsætningen skulle være lettere at forstå, før brugeren kunne få glæde af løsningen.",
-          "Vi ville undersøge, hvor processen blev unødvendigt kompliceret, og hvordan vi kunne forbedre den inden for rammerne af det eksisterende produkt.",
+          "Vuuh var et gruppeprojekt på 3. semester, hvor vi arbejdede med onboarding i en eksisterende fashion tech-løsning. Produktet hjælper webshopejere med at hente produktdata fra brands, men opsætningen skulle være lettere at forstå.",
+          "Vi ville undersøge, hvor processen blev unødvendigt kompliceret, og hvor vi kunne sætte ind med en optimering, der hjalp brugeren til at forstå flowet - og få en hurtigere succesoplevelse.",
         ],
       },
       {
         heading: "Hvor bliver brugeren i tvivl?",
         paragraphs: [
-          "Vi tog udgangspunkt i den eksisterende onboarding og undersøgte de steder, hvor brugeren kunne miste overblikket: Hvad skal jeg gøre nu? Hvad betyder det her? Og hvordan ved jeg, om det er lykkedes?",
-          "[Udfyld før aflevering: Beskriv ét konkret fund fra jeres UX-audit, hvor det opstod, og hvorfor det var vigtigt at prioritere.]",
-          "Det fund blev et af vores afsæt for redesignet. Jeg synes, det var interessant at arbejde med en løsning, der allerede eksisterede, fordi vi skulle kunne begrunde vores ændringer ud fra de problemer, vi fandt.",
+          "Et af vores fund var den side, Vuuh selv kalder en successide, som brugeren møder efter at have downloadet appen på Shopify. Her blev brugeren ikke tydeligt guidet videre til næste trin.",
+          "Siden indeholdt information, som brugeren skulle bruge inde i appen, men det var ikke tydeligt, at oplysningerne skulle bruges senere. Brugeren skulle derfor selv forstå sammenhængen mellem successiden og den videre opsætning.",
         ],
-        media: {
-          layout: "comparison",
-          items: [
-            picture(
-              "Den oprindelige onboarding",
-              "Det trin, hvor problemet opstod.",
-            ),
-            picture(
-              "Et udvalgt Finding Card",
-              "Fundet og den evidens, der lå bag vores prioritering.",
-            ),
-          ],
-        },
       },
       {
         heading: "Mindre kompleksitet, tydeligere retning",
+        layout: "text-above",
         paragraphs: [
-          "Vi arbejdede med at forsimple indholdet, prioritere informationen og gøre handlingerne tydeligere. Målet var, at brugeren lettere kunne forstå næste skridt og komme videre på egen hånd.",
-          "Motion design blev brugt til at understøtte forståelsen af processen. Bevægelsen skulle have et formål og hjælpe med at vise, hvad der skete, når brugeren handlede.",
-          "[Udfyld før aflevering: Beskriv ændringen, der adresserede fundet ovenfor, og hvordan den blev vist i prototypen.]",
+          "Vi ændrede successiden, så den både bekræfter brugerens fremskridt og forklarer næste skridt. Vi tydeliggjorde, at shopnavnet skal kopieres og bruges i den videre opsætning, og tilføjede et direkte link ind i Vuuh-appen.",
+          "Et screenshot med en pil viser, hvor brugeren skal fortsætte inde i appen. Derudover gjorde vi de tre trin i onboardingen tydelige og arbejdede med en animeret progressbar for at give brugeren overblik over, hvor langt hun er, og hvad der mangler.",
         ],
         media: {
-          layout: "comparison",
+          layout: "before-after",
           items: [
-            picture("Før redesign", "Det oprindelige trin."),
             picture(
-              "Efter redesign",
-              "Samme trin med jeres konkrete forbedring.",
+              "Successiden før",
+              "Den oprindelige side uden tydelig vejledning til næste trin.",
+              "cases/vuuh/successide-foer.png",
+            ),
+            picture(
+              "Successiden efter",
+              "Redesignet med konkrete instruktioner og et direkte link til appen.",
+              "cases/vuuh/successide-efter.png",
             ),
           ],
         },
       },
       {
-        heading: "Den samlede oplevelse",
+        heading: "Fremskridt, der motiverer",
         paragraphs: [
-          "Den interaktive prototype samlede vores ændringer i et flow. Her kunne vi arbejde med sammenhængen mellem brugerens handlinger og den feedback, løsningen giver.",
-          "[Udfyld før aflevering: Hvis I gennemførte et Accessibility Design Check, beskriv én barriere, jeres ændring og hvordan I vurderede den igen.]",
+          "Vi ville gøre onboarding til en overskuelig proces med tre tydelige trin. Derfor udviklede vi en progressbar, hvor en lille papirflyver bevæger sig frem, mens baren fyldes med grønt.",
+          "Animationen skulle fungere som en lille visuel belønning og give brugeren en følelse af at komme videre. Sammen med opmuntrende beskeder ville vi motivere brugeren til at gennemføre de sidste trin. Her tog vi afsæt i completion bias — tilbøjeligheden til at ville færdiggøre en påbegyndt opgave.",
+          "Progressbaren var en af de dele, vi fik særlig ros for i feedbacken. Det var positivt at opleve, at en lille detalje i interaktionen blev bemærket. Om den faktisk får flere brugere til at gennemføre onboardingen, ville kræve en test med målgruppen.",
         ],
         media: {
-          layout: "carousel",
+          layout: "single",
           items: [
-            picture("Første trin", "Indsæt første skærm fra det nye flow."),
-            picture("Næste handling", "Vis hvordan brugeren kommer videre."),
-            picture("Feedback", "Vis systemets reaktion på handlingen."),
+            {
+              type: "video",
+              src: asset("cases/vuuh/progressbar.mp4"),
+              title: "Vuuhs animerede progressbar",
+              caption:
+                "Papirflyveren og den grønne bar viser fremskridtet gennem onboardingens tre trin.",
+            },
           ],
         },
       },
       {
         heading: "Min rolle",
         paragraphs: [
-          "[Udfyld før aflevering: Hvilke fund, skærme, interaktioner eller animationer arbejdede du selv med? Hvad udviklede I sammen?]",
+          "Vi var begge tæt inde over analysen og designarbejdet, mens jeg havde særligt fokus på motion design. Vi arbejdede med, hvordan feedback og små visuelle belønninger kunne give brugeren en følelse af fremdrift. Det var vigtigt for os at forsimple og tydeliggøre den eksisterende proces frem for at lave den om.",
         ],
       },
     ],
     reflection: [
-      "Vuuh gav mig mulighed for at arbejde mere detaljeret med interaktioner i et eksisterende produkt. Små ændringer i tekst, placering og feedback kan have stor betydning for, hvor overskuelig en proces føles.",
-      "For mig var det lærerigt at holde fast i problemet bag designvalget. En løsning kan godt se mere enkel ud, uden at den nødvendigvis er lettere at forstå. Et næste skridt ville være at afprøve prototypen med relevante brugere og undersøge, om de faktisk kan gennemføre onboardingen mere selvstændigt.",
+      "Det var fedt at samarbejde med virksomheden og få feedback undervejs. Det gav os mulighed for at justere vores fokus og lægge energien dér, hvor de oplevede et særligt behov for vores hjælp.",
+      "For mig var det lærerigt at arbejde med konkrete forbedringer inden for rammerne af et eksisterende produkt. Vi kunne bruge vores idéer og motion design til at tydeliggøre processen og give brugeren en følelse af fremdrift.",
     ],
   },
   {

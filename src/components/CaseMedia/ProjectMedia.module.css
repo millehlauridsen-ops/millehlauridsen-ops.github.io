@@ -153,3 +153,56 @@
   object-fit: cover;
   display: block;
 }
+
+/* Før/efter: lige brede felter med samme højde */
+.media:has(> .figure:nth-child(2)):not(.comparison) {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.media:has(> .figure:nth-child(2)):not(.comparison) .figure img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 11;
+  max-height: none;
+  object-fit: contain;
+  background: var(--paper-light);
+}
+
+@media (max-width: 760px) {
+  .media:has(> .figure:nth-child(2)):not(.comparison) {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+.figure video {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  max-height: none;
+  margin: 0 auto;
+  display: block;
+  border: 0;
+  background: transparent;
+}
+
+.videoCrop {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.videoCrop video {
+  width: 100%;
+  max-width: none;
+  display: block;
+  transform: scale(1.04);
+}
+.figure:has(.videoCrop) figcaption {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 10px 0 0;
+}

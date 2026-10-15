@@ -55,7 +55,6 @@ export default function CaseMedia({ media }) {
         className={`${styles.media} ${
           media.layout === "comparison" ? styles.comparison : ""
         } ${styles[media.variant] || ""}`}
-        s
       >
         {items.map((item, i) => (
           <MediaItem key={`${item.title}-${i}`} item={item} />

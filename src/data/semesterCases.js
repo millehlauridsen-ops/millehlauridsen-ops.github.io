@@ -1,4 +1,3 @@
-// Placering: src/data/semesterCases.js
 // Billedstier er relative til public/. Sæt src til et filnavn, når du har billedet.
 const asset = (path) => `${import.meta.env.BASE_URL}${path}`;
 const picture = (title, caption, file = null) => ({

@@ -253,7 +253,7 @@ export default function ProjectPage() {
                   : project.isSemesterCase && section.media
                     ? styles.caseSplit
                     : ""
-              }`}
+              } ${section.theme === "dark" ? styles.darkSection : ""}`}
               key={section.heading}
             >
               <div className={styles.storyHeading}>

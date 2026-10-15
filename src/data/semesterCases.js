@@ -40,15 +40,6 @@ export const semesterCases = [
           "Mellemrum var et individuelt projekt på 3. semester, hvor vi fik udleveret en React-prototype, vi skulle arbejde videre på. Den grundlæggende løsning var der, men tilmeldingsformularen gemte ikke oplysningerne, og der manglede feedback, når siden hentede data eller noget gik galt.",
           "Jeg valgte at fokusere på strukturen i koden og sammenhængen mellem events, lokationer og tilmeldinger. Jeg ville gerne få de centrale funktioner til at fungere sammen og gøre koden mere overskuelig at arbejde videre med.",
         ],
-        media: {
-          layout: "single",
-          items: [
-            picture(
-              "Eventoversigten",
-              "Et samlet overblik over kommende events med søgning og kategorier.",
-            ),
-          ],
-        },
       },
       {
         heading: "Mere overblik i koden",
@@ -58,62 +49,74 @@ export const semesterCases = [
         ],
       },
       {
-        heading: "Fra tilmelding til overblik",
+        heading: "Tilmelding og overblik",
+        layout: "text-above",
         paragraphs: [
-          "Jeg arbejdede med at forbinde events, lokationer og tilmeldinger gennem relationer i Supabase. En tilmelding blev knyttet til det valgte events id frem for at gemme eventets titel som en separat oplysning. Det gjorde relationen tydeligere og betød, at titlen kunne ændres uden at skulle opdateres i hver tilmelding.",
-          "På den interne side samlede jeg tilmeldingerne i et overblik, hvor de nyeste vises først. Her kan arrangøren filtrere efter event og bekræfte eller slette en tilmelding. For mig var det vigtigt, at oplysningerne ikke bare blev gemt i databasen, men også kunne bruges i den anden ende af løsningen.",
+          "I den oprindelige løsning blev oplysningerne fra formularen kun skrevet i konsollen. Jeg ændrede det, så en tilmelding bliver gemt i Supabase og knyttet til det valgte event gennem eventets id.",
+          "Jeg arbejdede også med at hente lokationens oplysninger gennem en relation mellem events og venues, så de samme oplysninger ikke skulle stå på hvert event.",
+          "På arrangørens side samlede jeg tilmeldingerne i en tabel med de nyeste først. Her kan man filtrere efter event, bekræfte en tilmelding eller slette den. Det gav et samlet overblik over de oplysninger, brugeren sender ind.",
         ],
         media: {
           layout: "comparison",
+          variant: "registration",
           items: [
             picture(
-              "Tilmelding til et event",
-              "Brugerens side af tilmeldingsflowet.",
+              "Tilmeldingsformular",
+              "Formularen med validering af obligatoriske felter.",
+              "cases/mellemrum/tilmelding.png",
             ),
             picture(
               "Arrangørens overblik",
-              "Tilmeldinger vises sammen med det event, de hører til.",
+              "Tilmeldinger med event, status og mulighed for bekræftelse og sletning.",
+              "cases/mellemrum/overblik.png",
             ),
           ],
         },
       },
       {
-        heading: "Når data ikke kommer som forventet",
+        heading: "Feedback til brugeren",
         paragraphs: [
-          "Jeg arbejdede også med de situationer, hvor siden venter på data, en søgning ikke giver resultater, eller et API-kald fejler. Brugeren skal kunne forstå, hvad der sker, i stedet for at møde en tom side.",
-          "Kommunikationen med Supabase blev samlet i en service-fil, så databasekald kunne genbruges på tværs af siderne. Derudover arbejdede jeg med fokus på sidens overskrift ved navigation og visning af resterende pladser på det enkelte event.",
+          "Jeg arbejdede også med de situationer, hvor løsningen ikke bare virker som forventet. Jeg tilføjede loading- og fejlbeskeder samt besked ved tomme søgeresultater. I tilmeldingsformularen får brugeren feedback, mens tilmeldingen sendes, og besked om, hvorvidt den blev gemt.",
         ],
         media: {
-          layout: "carousel",
+          layout: "single",
           items: [
-            picture("Loading", "Feedback mens events hentes."),
             picture(
-              "Ingen resultater",
-              "Et relevant næste skridt, når søgningen ikke giver resultater.",
-            ),
-            picture(
-              "Fejlbesked",
-              "En forståelig besked, hvis data ikke kan hentes.",
+              "Ingen events fundet",
+              "Ved tomme søgeresultater får brugeren hjælp til at ændre sin søgning.",
+              "cases/mellemrum/ingen-resultater.png",
             ),
           ],
         },
-      },
-      {
-        heading: "Min rolle",
-        paragraphs: [
-          "Jeg stod selv for videreudviklingen af den udleverede prototype. Mit arbejde omfattede React, relationer i Supabase, tilmeldingsformularen og det interne overblik. Det gav mig mulighed for at arbejde med både det, brugeren møder, og den struktur, der får løsningen til at hænge sammen.",
-        ],
       },
       {
         heading: "Kontrol af løsningen",
+        theme: "dark",
+        layout: "text-above",
         paragraphs: [
-          "[Udfyld før aflevering: Beskriv én konkret kontrol af din løsning. Hvad afprøvede du, hvad forventede du, og hvad viste resultatet? Brug fx en tilmelding, som blev gemt og vist på den deployede version.]",
+          "Jeg kontrollerede tilmeldingsflowet ved at oprette en testtilmelding gennem formularen og bagefter tjekke, at den blev vist under det rigtige event i arrangørens overblik. Undervejs tjekkede jeg også løbende Supabase for at sikre mig, at oplysningerne blev gemt som forventet.",
+          "Jeg brugte Lighthouse undervejs og fik blandt andet en advarsel om overskriftsstrukturen, som jeg efterfølgende arbejdede med. Jeg justerede også bogstavafstanden med fokus på læsbarhed.",
         ],
+        media: {
+          layout: "before-after",
+          items: [
+            picture(
+              "Bogstavafstand før",
+              "Før: Overskriftens bogstaver stod så tæt, at flere overlappede.",
+              "cases/mellemrum/bogstavafstand-foer.png",
+            ),
+            picture(
+              "Bogstavafstand efter",
+              "Efter: Bogstavafstanden blev øget for at adskille bogstaverne tydeligere.",
+              "cases/mellemrum/bogstavafstand-efter.png",
+            ),
+          ],
+        },
       },
     ],
     reflection: [
-      "I dette projekt oplevede jeg igen tilfredsstillelsen i at forbedre en eksisterende løsning. En ændring i databasen kan virke lille, men den får betydning flere steder i produktet.",
-      "Jeg fik en bedre forståelse for, hvordan frontend og data hænger sammen, og hvor vigtigt det er at tænke hele flowet igennem. Det er ikke nok, at en formular ser færdig ud — oplysningerne skal gemmes korrekt, forbindes med det rigtige event og kunne vises igen.",
+      "Det var lærerigt at arbejde videre på kode, jeg ikke selv havde skrevet. Jeg skulle lige finde rundt i løsningen, men det gav også mening at få ryddet op og samlet nogle af de ting, der gik igen.",
+      "Jeg fik især mere erfaring med Supabase og med at få formularen, databasen og tilmeldingsoversigten til at hænge sammen.",
     ],
   },
   {

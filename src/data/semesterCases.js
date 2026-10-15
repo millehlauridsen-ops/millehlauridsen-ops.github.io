@@ -180,9 +180,9 @@ export const semesterCases = [
       {
         heading: "Fremskridt, der motiverer",
         paragraphs: [
-          "Vi ville gøre onboarding til en overskuelig proces med tre tydelige trin. Derfor udviklede vi en progressbar, hvor en lille papirflyver bevæger sig frem, mens baren fyldes med grønt.",
-          "Animationen skulle fungere som en lille visuel belønning og give brugeren en følelse af at komme videre. Sammen med opmuntrende beskeder ville vi motivere brugeren til at gennemføre de sidste trin. Her tog vi afsæt i completion bias — tilbøjeligheden til at ville færdiggøre en påbegyndt opgave.",
-          "Progressbaren var en af de dele, vi fik særlig ros for i feedbacken. Det var positivt at opleve, at en lille detalje i interaktionen blev bemærket. Om den faktisk får flere brugere til at gennemføre onboardingen, ville kræve en test med målgruppen.",
+          "Vi udviklede en progressbar med tre tydelige trin, hvor en lille papirflyver bevæger sig frem, mens baren fyldes med grønt.",
+          "Animationen og de opmuntrende beskeder skulle belønne brugerens fremskridt og motivere til at fortsætte. Vi tog afsæt i completion bias — tilbøjeligheden til at ville færdiggøre en påbegyndt opgave.",
+          "Progressbaren fik særlig ros i feedbacken. Om den får flere brugere til at gennemføre onboardingen, ville kræve en test med målgruppen.",
         ],
         media: {
           layout: "single",
@@ -253,10 +253,9 @@ export const semesterCases = [
         heading: "En helt ny retning med et genkendeligt afsæt",
         layout: "text-above",
         paragraphs: [
-          "Vi udviklede Go Rogue med inspiration fra LA ROUGEs fortælling om selvkærlighed og retten til at være sig selv og tage plads. Men vi ville give den fortælling et mere direkte og modigt udtryk, der læner sig op ad, hvad det vil sige at være en 'feminist' for den unge, moderne kvinde.",
-          "Undervejs undersøgte vi forskellige visuelle retninger. Én lå tættere på moderbrandets eksisterende univers med rolige, dæmpede farver og klassisk stil, mens en anden havde mere kontrast og kant. Vi arbejdede videre med den mere markante retning, da den stil læner sig mere i en ungdommelig og dristig retning - som vi vurderede ville resonere med den yngre målgruppe.",
-          "Det var interessant at eksperimentere med, hvor langt vi kunne skubbe udtrykket og stadig bevare forbindelsen til LA RŌUGE.",
-          "Vi tog udgangspunkt i skelettet fra LA RŌUGE for at have et originalt og klassisk touch at læne sig op af - og det gav os mere plads til at eksperimentere med det visuelle udtryk i de små detaljer.",
+          "Vi tog afsæt i LA RŌUGEs fortælling om selvkærlighed og retten til at være sig selv og tage plads. Vi ville give den et mere direkte og modigt udtryk med inspiration fra den unge, moderne kvindes feminisme.",
+          "Vi undersøgte både en klassisk retning med dæmpede farver og en med mere kontrast og kant. Vi valgte den mere markante stil, som vi vurderede ville resonere med den yngre målgruppe.",
+          "Vi beholdt skelettet fra LA RŌUGE som et genkendeligt fundament. Det gav os plads til at eksperimentere med de visuelle detaljer.",
         ],
         media: {
           layout: "comparison",
@@ -338,9 +337,7 @@ export const semesterCases = [
       {
         heading: "Min rolle",
         paragraphs: [
-          "For mig var det vigtigt, at vi gav plads til at lege med idéen og prøve skøre og skæve retninger af. Jeg tog initiativ til, at vi bevægede os væk fra Re Rouge-idéen og undersøgte en mere modig og skæv brandpersona. Jeg ville gerne udfordre vores første retning og se, hvad konceptet kunne blive til, hvis vi tænkte lidt mere ud af boksen.",
-          "Dog er jeg også bevidst om, at skæve, skøre retninger kan være svære at forene med et eksisterende brand. Det kræver en delikat balancegang at bevare essensen af brandet, samtidig med at man udforsker nye kreative muligheder.",
-          "Derfor brugte vi LA ROUGEs eksisterende skelet og fundament som udgangspunkt og byggede videre på det med nye idéer og koncepter.",
+          "For mig var det vigtigt, at vi gav plads til at lege med idéen og prøve skøre og skæve retninger af. Jeg tog initiativ til at gå væk fra Re Rouge-idéen og undersøge en mere modig og skæv brandpersona. Jeg ville gerne se, hvad konceptet kunne blive til, hvis vi tænkte lidt mere ud af boksen.",
         ],
       },
     ],

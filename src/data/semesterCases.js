@@ -117,16 +117,15 @@ export const semesterCases = [
     year: "2026",
     title: "Vuuh",
     category: "UX/UI · Onboarding · Produktoptimering",
-    intro:
-      "En mere overskuelig vej fra opsætning til oplevelsen af produktets værdi.",
+    intro: "Onboarding - oplevelse og produktoptimering.",
     services: "UX-analyse, interaktionsdesign, prototype",
     tools: "Figma",
     collaboration: "Gruppeprojekt · 3. semester",
     description:
-      "Et redesign af en eksisterende onboarding med fokus på tydelige handlinger, mindre kompleksitet og forståelig feedback.",
+      "Et redesign og optimering af en eksisterende onboarding med fokus på tydelige handlinger, mindre kompleksitet og forståelig feedback.",
     isSemesterCase: true,
-    // Eksempel: cover: asset("cases/vuuh/cover.webp"),
-    coverAlt: "Den redesignede onboarding i Vuuh",
+    cover: asset("cases/vuuh/cover.png"),
+    coverAlt: "Intro til onboarding i Vuuh",
     // Tilføj dine egne links: { label: "Se Figma-prototypen", url: "https://..." }
     links: [],
     story: [

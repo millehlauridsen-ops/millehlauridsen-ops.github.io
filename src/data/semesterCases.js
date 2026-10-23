@@ -317,11 +317,6 @@ export const semesterCases = [
               "cases/go-rogue/hangtags.png",
             ),
             picture(
-              "Hjerteformet hangtag",
-              "Go Rogues logo på det hjerteformede hangtag.",
-              "cases/go-rogue/hearttag.svg",
-            ),
-            picture(
               "Klistermærker",
               "Logoer og grafiske elementer fra LA RŌUGE og Go Rogue.",
               "cases/go-rogue/stickers.png",
@@ -330,6 +325,11 @@ export const semesterCases = [
               "Noten i pakken",
               "En personlig hilsen med fokus på at forlænge tøjets levetid.",
               "cases/go-rogue/note.png",
+            ),
+            picture(
+              "Hjerteformet hangtag",
+              "Go Rogues logo på det hjerteformede hangtag.",
+              "cases/go-rogue/hearttag.svg",
             ),
           ],
         },

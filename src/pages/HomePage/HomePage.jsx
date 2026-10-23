@@ -4,14 +4,26 @@ import portrait from "../../assets/images/mig.jpeg";
 import circles from "../../assets/graphics/stororangegul.svg";
 import blueLines from "../../assets/graphics/blaastreger.svg";
 import beerLabels from "../../assets/projects/beerlabels.png";
-import moviePoster from "../../assets/projects/movieposter.png";
 import pubHubImage from "../../assets/projects/pubhubposter.png";
 import styles from "./HomePage.module.css";
+import { projects } from "../../data/projects";
+
+const goRogue = projects.find((project) => project.slug === "go-rogue");
 
 const featuredProjects = [
   {
-    slug: "anarkist-etiketter",
+    slug: "go-rogue",
     number: "01",
+    title: "Go Rogue",
+    category: "Brandidentitet · Konceptudvikling · Re-commerce",
+    description:
+      "Et subbrand med sin egen stemme og et genkendeligt afsæt i LA RŌUGE.",
+    image: `${import.meta.env.BASE_URL}cases/go-rogue/note.png`,
+    imageAlt: "Go Rogue-note til at lægge i kassen med tøjet",
+  },
+  {
+    slug: "anarkist-etiketter",
+    number: "02",
     title: "Øletiketter til Anarkist",
     category: "Emballagedesign · Grafisk design",
     description:
@@ -22,23 +34,13 @@ const featuredProjects = [
   },
   {
     slug: "pubhub",
-    number: "02",
+    number: "03",
     title: "PubHub",
     category: "Appdesign · UX/UI · React",
     description:
       "Et appkoncept, der gør det lettere at opdage nye barer og oplevelser i Aarhus.",
     image: pubHubImage,
     imageAlt: "Skærmbillede fra PubHub-applikationen",
-  },
-  {
-    slug: "loebet-filmplakat",
-    number: "03",
-    title: "Løbet",
-    category: "Plakatdesign · Visuel fortælling",
-    description:
-      "En filmplakat, hvor komposition og billedbehandling omsætter en aktuel uro til et visuelt udtryk.",
-    image: moviePoster,
-    imageAlt: "Filmplakaten Løbet vist på en plakatvæg",
   },
 ];
 

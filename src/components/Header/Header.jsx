@@ -16,9 +16,31 @@ export default function Header() {
     <header className={styles.header}>
       <nav className={styles.nav} aria-label="Primær navigation">
         {" "}
-        <NavLink to="/" className={styles.logo} onClick={() => setOpen(false)}>
-          Mille Høj Lauridsen
-        </NavLink>
+        <div className={styles.brand}>
+          <a
+            className={styles.firstPortfolio}
+            href="https://millehlauridsen-ops.github.io/portfolio-original/"
+          >
+            <span className={styles.firstPortfolioLabel}>
+              Min første portfolio ↗
+            </span>
+
+            <span className={styles.firstPortfolioPreview} aria-hidden="true">
+              <img
+                src={`${import.meta.env.BASE_URL}images/foerste-portfolio.png`}
+                alt=""
+              />
+            </span>
+          </a>
+
+          <NavLink
+            to="/"
+            className={styles.logo}
+            onClick={() => setOpen(false)}
+          >
+            Mille Høj Lauridsen
+          </NavLink>
+        </div>
         <button
           className={styles.menuButton}
           onClick={() => setOpen((value) => !value)}

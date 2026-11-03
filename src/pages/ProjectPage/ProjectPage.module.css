@@ -610,10 +610,25 @@
     font-weight: 400;
   }
 
+  .mobileCarouselBlock,
+  .mobileCarousel,
+  .mobileTrack {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .mobileTrack {
+    align-items: flex-start;
+  }
+
   .mobileTrack img {
-    min-width: 100%;
-    height: 64vh;
-    object-fit: cover;
+    display: block;
+    flex: 0 0 100%;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
   }
 
   .next {

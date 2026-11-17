@@ -12,7 +12,7 @@ const projectFilters = [
   },
   {
     label: "Web & apps",
-    slugs: ["mellemrum", "pubhub", "lumina-one"],
+    slugs: ["pubhub", "lumina-one"],
   },
   {
     label: "Konceptudvikling & UX",
@@ -36,7 +36,7 @@ const projectFilters = [
   },
   {
     label: "3. semester",
-    slugs: ["mellemrum", "vuuh", "go-rogue"],
+    slugs: ["vuuh", "go-rogue"],
   },
 ];
 
